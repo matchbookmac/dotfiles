@@ -1,3 +1,12 @@
+##### CONSTANTS
+
+# amazon ec2 user and url
+ec2user=$(<~/.scripts/ec2user)
+# git key path
+gitkeypath=$(<~/.scripts/git-key-path)
+# ec2 key path
+ec2keypath=$(<~/.scripts/ec2-key-path)
+
 ##### ALIASES
 
 # reload bash_profile
@@ -11,10 +20,10 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # logs in via ssh to amazon aws instance
-alias ec2log='ssh -i ~/.ssh/authorized_keys/matchbook.pem ec2-user@ec2-54-68-80-150.us-west-2.compute.amazonaws.com'
+alias ec2log="ssh -i $gitkeypath $ec2user"
 
 # starts ssh agent and adds key, for use before working with git remote repository
-alias startssh='ssh-agent -s | ssh-add ~/.ssh/authorized_keys/matchbook.pem | ssh-add ~/.ssh/id_rsa'
+alias startssh="ssh-agent -s | ssh-add $gitkeypath | ssh-add $ec2keypath"
 
 # Used to clone from personal server. Pass project .git file as argument.
 alias ec2clone='~/.scripts/ec2clone.sh'
@@ -107,11 +116,6 @@ PS2="$DARK_GREY    continue$LIGHT_GREY:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch
 
 proml
 
-
-##### CONSTANTS
-
-# amazon ec2 user and url
-EC2USER="ec2-user@ec2-54-68-80-150.us-west-2.compute.amazonaws.com"
 
 ##### POSTGRES SETTINGS
 
