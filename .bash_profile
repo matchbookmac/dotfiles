@@ -1,11 +1,11 @@
 ##### CONSTANTS
 
 # amazon ec2 user and url
-ec2user=$(<~/.scripts/ec2user)
+ec2user=$(<~/.dotfiles/ec2user)
 # git key path
-gitkeypath=$(<~/.scripts/git-key-path)
+gitkeypath=$(<~/.dotfiles/git-key-path)
 # ec2 key path
-ec2keypath=$(<~/.scripts/ec2-key-path)
+ec2keypath=$(<~/.dotfiles/ec2-key-path)
 
 ##### ALIASES
 
