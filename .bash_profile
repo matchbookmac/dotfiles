@@ -111,7 +111,7 @@ PS1="$DARK_GREY\u$LIGHT_GREY:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT 
 #        /        @@
 #   ~~~~~\\_\;m__m._>o "
 
-PS2="$DARK_GREY    continue$LIGHT_GREY:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $DARK_GREY|$VIOLET\j$DARK_GREY| <>$DEFAULT "
+PS2="$LIGHT_GREY    continue$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 }
 
 proml
