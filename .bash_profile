@@ -34,6 +34,10 @@ alias gc='git commit -m '
 alias gac='git commit -a -m '
 alias gg='git log --graph --oneline --all --decorate --remotes'
 alias gst='git status'
+alias gp='git push'
+
+# server shortcuts
+alias server='python -m SimpleHTTPServer 4567'
 
 #### Project Scaffolds
 
