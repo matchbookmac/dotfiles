@@ -1,0 +1,20 @@
+"*":
+  "exception-reporting":
+    userId: "c008d053-6a7e-6f74-b924-8421ff1db0cf"
+  welcome:
+    showOnStartup: false
+  "tree-view":
+    hideVcsIgnoredFiles: false
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  editor:
+    invisibles: {}
+    softWrap: true
+    showIndentGuide: true
+    fontSize: 15
+".erb.html.text":
+  editor:
+    showIndentGuide: true

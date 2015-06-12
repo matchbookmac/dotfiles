@@ -1,11 +1,16 @@
 ##### CONSTANTS
 
-# amazon ec2 user and url
-ec2user=$(<~/.dotfiles/ec2user)
-# git key path
-gitkeypath=$(<~/.dotfiles/git-key-path)
-# ec2 key path
-ec2keypath=$(<~/.dotfiles/ec2-key-path)
+if [ $USER != Guest ]
+then
+  # amazon ec2 user and url
+  ec2user=$(<~/.dotfiles/ec2user)
+  # git key path
+  gitkeypath=$(<~/.dotfiles/git-key-path)
+  # ec2 key path
+  ec2keypath=$(<~/.dotfiles/ec2-key-path)
+else
+  cd ~/Desktop
+fi
 
 ##### ALIASES
 
