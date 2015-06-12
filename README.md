@@ -14,7 +14,7 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. Mac
 
 General configuration files for setting up familiar working environment on machines that are not my own.
 
-See my (<a href="https://github.com/matchbookmac/shell_scripts" target="#">Shell Scripts</a>) repo for automating the download and use of the files in this repository.
+See my <a href="https://github.com/matchbookmac/shell_scripts" target="#">Shell Scripts</a> repo for automating the download and use of the files in this repository.
 
 ### Author(s)
 
