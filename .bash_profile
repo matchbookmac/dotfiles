@@ -40,6 +40,7 @@ alias gac='git commit -a -m '
 alias gg='git log --graph --oneline --all --decorate --remotes'
 alias gst='git status'
 alias gp='git push'
+alias gcreate='~/.scripts/git_create_repo.sh'
 
 # server shortcuts
 alias server='python -m SimpleHTTPServer 4567'
