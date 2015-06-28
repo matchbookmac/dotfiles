@@ -14,6 +14,9 @@ fi
 
 ##### ALIASES
 
+# If you run into trouble with installing gems or bundling, try putting this before command:
+# env ARCHFLAGS='-arch x86_64'
+
 # reload bash_profile
 alias sb='source ~/.bash_profile'
 # edit bash_profile
@@ -51,6 +54,8 @@ alias server='python -m SimpleHTTPServer 4567'
 alias jsproj='~/.scripts/jsscaffold.sh'
 # Ruby and Sinatra App
 alias rsproj='~/.scripts/sinatra_ruby.sh'
+# Rails App RUN AFTER `rails new <proj>`
+alias railsproj='~/.scripts/railsscaffold.sh'
 
 ##### OPTIONS
 
