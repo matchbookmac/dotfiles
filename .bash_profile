@@ -8,6 +8,9 @@ then
   gitkeypath=$(<~/.dotfiles/git-key-path)
   # ec2 key path
   ec2keypath=$(<~/.dotfiles/ec2-key-path)
+  
+  # Where to find the database cluster
+  export PGDATA=/usr/local/var/postgres
 else
   cd ~/Desktop
 fi
@@ -134,8 +137,6 @@ proml
 
 ##### POSTGRES SETTINGS
 
-# Where to find the database cluster
-export PGDATA=/usr/local/var/postgres
 
 # Helps some to find Postgres more easily
 export PGHOST=/tmp
