@@ -8,13 +8,13 @@
   core:
     themes: [
       "seti-ui"
-      "seti-syntax"
+      "atom-dark-syntax"
     ]
   editor:
     invisibles: {}
     softWrap: true
     showIndentGuide: true
-    fontSize: 15
+    fontSize: 13
 ".erb.html.text":
   editor:
     showIndentGuide: true
