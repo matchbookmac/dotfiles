@@ -8,7 +8,7 @@ then
   gitkeypath=$(<~/.dotfiles/git-key-path)
   # ec2 key path
   ec2keypath=$(<~/.dotfiles/ec2-key-path)
-  
+
   # Where to find the database cluster
   export PGDATA=/usr/local/var/postgres
 else
@@ -59,6 +59,12 @@ alias jsproj='~/.scripts/jsscaffold.sh'
 alias rsproj='~/.scripts/sinatra_ruby.sh'
 # Rails App RUN AFTER `rails new <proj>`
 alias railsproj='~/.scripts/railsscaffold.sh'
+railsfunction() {
+  rails new $1
+  cd $1
+  railsproj
+}
+alias rails_new=railsfunction
 
 ##### OPTIONS
 
@@ -128,8 +134,15 @@ PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIG
 #         _______()()
 #        /        @@
 #   ~~~~~\\_\;m__m._>o "
+numtimes=$((${#USER}-8))
+whitespace=""
+space=" "
+while [ $numtimes -gt 1 ]; do
+  whitespace="${whitespace} "
+  numtimes=$((numtimes-1))
+done
 
-PS2="$LIGHT_GREY    continue$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
+PS2="$LIGHT_GREY$whitespace continue$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 }
 
 proml
