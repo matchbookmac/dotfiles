@@ -48,6 +48,11 @@ alias gst='git status'
 alias gp='git push'
 alias gcreate='~/.scripts/git_create_repo.sh'
 
+gn ()
+{
+  curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
+}
+
 # server shortcuts
 alias server='python -m SimpleHTTPServer 4567'
 
