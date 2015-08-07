@@ -24,6 +24,7 @@ fi
 alias sb='source ~/.bash_profile'
 # edit bash_profile
 alias eb='atom ~/.bash_profile'
+alias ec='env EDITOR=nano crontab -e'
 
 # shows hidden files in finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -51,6 +52,7 @@ alias gcreate='~/.scripts/git_create_repo.sh'
 gn ()
 {
   curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
+  git remote add origin https://github.com/matchbookmac/$1
 }
 
 # server shortcuts
