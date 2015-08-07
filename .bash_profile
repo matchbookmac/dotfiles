@@ -141,7 +141,7 @@ PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIG
 #         _______()()
 #        /        @@
 #   ~~~~~\\_\;m__m._>o "
-numtimes=$((${#USER}-8))
+numtimes=$((${#USER}-4))
 whitespace=""
 space=" "
 while [ $numtimes -gt 1 ]; do
@@ -149,7 +149,7 @@ while [ $numtimes -gt 1 ]; do
   numtimes=$((numtimes-1))
 done
 
-PS2="$LIGHT_GREY$whitespace continue$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
+PS2="$LIGHT_GREY$whitespace cont$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 }
 
 proml
