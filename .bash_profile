@@ -24,7 +24,11 @@ fi
 alias sb='source ~/.bash_profile'
 # edit bash_profile
 alias eb='atom ~/.bash_profile'
+# edit cronjobs
 alias ec='env EDITOR=nano crontab -e'
+# The jobs below are for sending snmp traps
+# */2 * * * * /Users/ianmacdonald/.scripts/send_up_snmp_trap.sh
+# 1-59/2 * * * * /Users/ianmacdonald/.scripts/send_down_snmp_trap.sh
 
 # shows hidden files in finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
