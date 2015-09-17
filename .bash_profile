@@ -161,10 +161,11 @@ proml
 
 ##### POSTGRES SETTINGS
 
-
 # Helps some to find Postgres more easily
 export PGHOST=/tmp
 
+##### MYSQL SETTINGS
+export PATH=${PATH}:/usr/local/mysql/bin
 ##
 # Your previous /Users/ianmacdonald/.bash_profile file was backed up as /Users/ianmacdonald/.bash_profile.macports-saved_2015-03-01_at_20:17:15
 ##

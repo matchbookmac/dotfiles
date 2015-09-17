@@ -7,14 +7,21 @@
     hideVcsIgnoredFiles: false
   core:
     themes: [
-      "seti-ui"
-      "atom-dark-syntax"
+      "nucleus-dark-ui"
+      "adventurous-syntax"
     ]
+    audioBeep: false
   editor:
     invisibles: {}
     softWrap: true
     showIndentGuide: true
     fontSize: 13
+  minimap:
+    absoluteMode: true
+    displayMinimapOnLeft: true
+  "isotope-ui": {}
+  linter:
+    lintOnFly: false
 ".erb.html.text":
   editor:
     showIndentGuide: true
