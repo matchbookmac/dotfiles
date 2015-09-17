@@ -1,6 +1,6 @@
 ##### CONSTANTS
 
-if [ $USER != Guest ]
+if [ $USER == ianmacdonald ]
 then
   # amazon ec2 user and url
   ec2user=$(<~/.dotfiles/ec2user)
@@ -11,8 +11,6 @@ then
 
   # Where to find the database cluster
   export PGDATA=/usr/local/var/postgres
-else
-  cd ~/Desktop
 fi
 
 ##### ALIASES
@@ -37,6 +35,11 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # logs in via ssh to amazon aws instance
 alias ec2log="ssh -i $gitkeypath $ec2user"
+
+# multnomah ssh logging
+alias lbridge="ssh -i ~/.ssh/id_rsa_devops ianm@l-bridge.co.multnomah.or.us"
+alias spice="ssh -i ~/.ssh/id_rsa_devops ianm@spice.mcix.us"
+alias abridge="ssh a-bridge.internal.mcix.us"
 
 # starts ssh agent and adds key, for use before working with git remote repository
 alias startssh="ssh-agent -s | ssh-add $gitkeypath | ssh-add $ec2keypath"
