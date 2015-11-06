@@ -7,7 +7,7 @@
     hideVcsIgnoredFiles: false
   core:
     themes: [
-      "nucleus-dark-ui"
+      "atom-dark-ui"
       "adventurous-syntax"
     ]
     audioBeep: false

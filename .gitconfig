@@ -3,3 +3,5 @@
 	name = Ian MacDonald
 [core]
 	editor = vim
+[push]
+	default = simple
