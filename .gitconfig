@@ -1,10 +1,10 @@
 [user]
-	email = imacdonald@rumblefish.com
-	name = Ian MacDonald
+  email = imacdonald@rumblefish.com
+  name = Ian MacDonald
 [color]
   ui = true
 [core]
-	excludesfile = /Users/ianmacdonald/.gitignore_global
-	editor = vim
+  excludesfile = /Users/ianmacdonald/.gitignore_global
+  editor = vim
 [push]
-	default = simple
+  default = simple
