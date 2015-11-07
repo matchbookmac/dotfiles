@@ -18,7 +18,9 @@
     fontSize: 13
   minimap:
     absoluteMode: true
-    displayMinimapOnLeft: true
+    minimapScrollIndicator: false
+    plugins:
+      "minimap-autohide": true
   "isotope-ui": {}
   linter:
     lintOnFly: false
