@@ -1,3 +1,7 @@
-.ec2-key-path
-ec2user
-git-key-path
+./ec2-key-path
+./ec2user
+./git-key-path
+
+~/.ssh/authorized_keys/matchbook.pem
+ec2-user@ec2-54-68-80-150.us-west-2.compute.amazonaws.com
+~/.ssh/id_rsa
