@@ -1,5 +1,3 @@
-##### CONSTANTS
-
 if [ $USER == ianmacdonald ]
 then
   # amazon ec2 user and url
@@ -35,6 +33,19 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # logs in via ssh to amazon aws instance
 alias ec2log="ssh -i $gitkeypath $ec2user"
+
+### RUMBLEFISH STUFFS
+# RF logins
+ftp='10.20.20.219'
+rfserver ()
+{
+  ssh -i ~/.ssh/rumblefish-vpc.pem 'ubuntu@'$1''
+}
+# alias ftpserver="ssh -i ~/.ssh/rumblefish-vpc.pem ubuntu@10.20.20.219"
+
+# RF niceties
+# Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this
+alias rmqrestart="rabbitmqctl stop_app && rabbitmqctl reset && rabbitmqctl start_app"
 
 # multnomah ssh logging
 alias lbridge="ssh -i ~/.ssh/id_rsa_devops ianm@l-bridge.co.multnomah.or.us"
@@ -169,6 +180,16 @@ export PGHOST=/tmp
 
 ##### MYSQL SETTINGS
 export PATH=${PATH}:/usr/local/mysql/bin
+
+##### RabbitMQ Settings
+export PATH=$PATH:/usr/local/sbin
+
+##### RVM
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 ##
 # Your previous /Users/ianmacdonald/.bash_profile file was backed up as /Users/ianmacdonald/.bash_profile.macports-saved_2015-03-01_at_20:17:15
 ##
@@ -179,3 +200,5 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
