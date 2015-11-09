@@ -13,6 +13,9 @@
     audioBeep: false
     projectHome: "/Users/imacdonald/code"
     openEmptyEditorOnStart: false
+    disabledPackages: [
+      "linter-rubocop"
+    ]
   editor:
     invisibles: {}
     softWrap: true
@@ -26,6 +29,7 @@
   "isotope-ui": {}
   linter:
     lintOnFly: false
+  "linter-rubocop": {}
 ".erb.html.text":
   editor:
     showIndentGuide: true

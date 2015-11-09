@@ -15,5 +15,8 @@ source $DIR/lib/git.sh
 source $DIR/lib/alias.sh
 source $DIR/lib/rf.sh
 source $DIR/lib/multnomah.sh
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
 source $DIR/lib/option.sh
 source $DIR/lib/prompt.sh
