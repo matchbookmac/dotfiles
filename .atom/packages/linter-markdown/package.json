@@ -1,0 +1,955 @@
+{
+  "name": "linter-markdown",
+  "main": "./lib/init",
+  "version": "1.2.1",
+  "description": "Lint markdown on the fly, using mdast-lint",
+  "keywords": [],
+  "activationCommands": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomLinter/linter-markdown.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "mdast": "~1.1.0",
+    "mdast-lint": "~1.1.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "# linter-markdown\n\nLint markdown files utilizing [mdast-lint][mdast-lint] and the [linter][linter] package for atom.\n\nThe linting is easily [configurable][configuration] with mdast-lint.\n\nWe also maintain a [changelog][changelog] containing recent changes.\n\n![Screenshot of linter-markdown in action][screenshot]\n\n[mdast-lint]: https://github.com/wooorm/mdast-lint\n[changelog]: https://github.com/AtomLinter/linter-markdown/blob/master/CHANGELOG.md\n[configuration]: https://github.com/wooorm/mdast-lint#configuring-mdast-lint\n[linter]: https://atom.io/packages/linter\n[screenshot]: https://raw.githubusercontent.com/AtomLinter/linter-markdown/master/assets/screenshot.png\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-markdown/issues"
+  },
+  "homepage": "https://github.com/AtomLinter/linter-markdown#readme",
+  "_id": "linter-markdown@1.2.1",
+  "_shasum": "28dd254ec7710e9783bce0ddbe339bc4a433c88e",
+  "_resolved": "file:../d-115109-3777-znblaa/package.tgz",
+  "_from": "../d-115109-3777-znblaa/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "mdast",
+        "version": "1.1.0",
+        "path": "node_modules/mdast/index.js"
+      },
+      {
+        "name": "camelcase",
+        "version": "1.2.1",
+        "path": "node_modules/mdast/node_modules/camelcase/index.js"
+      },
+      {
+        "name": "ccount",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/ccount/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.1",
+        "path": "node_modules/mdast/node_modules/chalk/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.1.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.3",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/chalk/node_modules/supports-color/index.js"
+      },
+      {
+        "name": "collapse-white-space",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/collapse-white-space/index.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.9.0",
+        "path": "node_modules/mdast/node_modules/commander/index.js"
+      },
+      {
+        "name": "graceful-readlink",
+        "version": "1.0.1",
+        "path": "node_modules/mdast/node_modules/commander/node_modules/graceful-readlink/index.js"
+      },
+      {
+        "name": "concat-stream",
+        "version": "1.5.1",
+        "path": "node_modules/mdast/node_modules/concat-stream/index.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "2.0.4",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.1",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "process-nextick-args",
+        "version": "1.0.3",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/process-nextick-args/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/util-deprecate/node.js"
+      },
+      {
+        "name": "typedarray",
+        "version": "0.0.6",
+        "path": "node_modules/mdast/node_modules/concat-stream/node_modules/typedarray/index.js"
+      },
+      {
+        "name": "debug",
+        "version": "2.2.0",
+        "path": "node_modules/mdast/node_modules/debug/node.js"
+      },
+      {
+        "name": "ms",
+        "version": "0.7.1",
+        "path": "node_modules/mdast/node_modules/debug/node_modules/ms/index.js"
+      },
+      {
+        "name": "extend.js",
+        "version": "0.0.2",
+        "path": "node_modules/mdast/node_modules/extend.js/index.js"
+      },
+      {
+        "name": "he",
+        "version": "0.5.0",
+        "path": "node_modules/mdast/node_modules/he/he.js"
+      },
+      {
+        "name": "longest-streak",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/longest-streak/index.js"
+      },
+      {
+        "name": "markdown-table",
+        "version": "0.4.0",
+        "path": "node_modules/mdast/node_modules/markdown-table/index.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "2.0.10",
+        "path": "node_modules/mdast/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.1",
+        "path": "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.2.1",
+        "path": "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
+      },
+      {
+        "name": "repeat-string",
+        "version": "1.5.2",
+        "path": "node_modules/mdast/node_modules/repeat-string/index.js"
+      },
+      {
+        "name": "text-table",
+        "version": "0.2.0",
+        "path": "node_modules/mdast/node_modules/text-table/index.js"
+      },
+      {
+        "name": "to-vfile",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/to-vfile/index.js"
+      },
+      {
+        "name": "trim",
+        "version": "0.0.1",
+        "path": "node_modules/mdast/node_modules/trim/index.js"
+      },
+      {
+        "name": "trim-trailing-lines",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/trim-trailing-lines/index.js"
+      },
+      {
+        "name": "unified",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/unified/index.js"
+      },
+      {
+        "name": "attach-ware",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/unified/node_modules/attach-ware/index.js"
+      },
+      {
+        "name": "bail",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/unified/node_modules/bail/index.js"
+      },
+      {
+        "name": "unherit",
+        "version": "1.0.4",
+        "path": "node_modules/mdast/node_modules/unified/node_modules/unherit/index.js"
+      },
+      {
+        "name": "clone",
+        "version": "1.0.2",
+        "path": "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/clone/clone.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "user-home",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/user-home/index.js"
+      },
+      {
+        "name": "os-homedir",
+        "version": "1.0.1",
+        "path": "node_modules/mdast/node_modules/user-home/node_modules/os-homedir/index.js"
+      },
+      {
+        "name": "vfile",
+        "version": "1.1.2",
+        "path": "node_modules/mdast/node_modules/vfile/index.js"
+      },
+      {
+        "name": "vfile-reporter",
+        "version": "1.4.1",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/index.js"
+      },
+      {
+        "name": "log-symbols",
+        "version": "1.0.2",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/log-symbols/index.js"
+      },
+      {
+        "name": "plur",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/plur/index.js"
+      },
+      {
+        "name": "string-width",
+        "version": "1.0.1",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/index.js"
+      },
+      {
+        "name": "code-point-at",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/index.js"
+      },
+      {
+        "name": "number-is-nan",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/node_modules/number-is-nan/index.js"
+      },
+      {
+        "name": "is-fullwidth-code-point",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/index.js"
+      },
+      {
+        "name": "number-is-nan",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/node_modules/number-is-nan/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "vfile-sort",
+        "version": "1.0.0",
+        "path": "node_modules/mdast/node_modules/vfile-reporter/node_modules/vfile-sort/index.js"
+      },
+      {
+        "name": "ware",
+        "version": "1.3.0",
+        "path": "node_modules/mdast/node_modules/ware/lib/index.js"
+      },
+      {
+        "name": "wrap-fn",
+        "version": "0.1.4",
+        "path": "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/index.js"
+      },
+      {
+        "name": "co",
+        "version": "3.1.0",
+        "path": "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/node_modules/co/index.js"
+      },
+      {
+        "name": "mdast-lint",
+        "version": "1.1.1",
+        "path": "node_modules/mdast-lint/index.js"
+      },
+      {
+        "name": "decamelize",
+        "version": "1.1.1",
+        "path": "node_modules/mdast-lint/node_modules/decamelize/index.js"
+      },
+      {
+        "name": "mdast-range",
+        "version": "1.0.1",
+        "path": "node_modules/mdast-lint/node_modules/mdast-range/index.js"
+      },
+      {
+        "name": "mdast-util-heading-style",
+        "version": "1.0.0",
+        "path": "node_modules/mdast-lint/node_modules/mdast-util-heading-style/index.js"
+      },
+      {
+        "name": "mdast-util-position",
+        "version": "1.0.0",
+        "path": "node_modules/mdast-lint/node_modules/mdast-util-position/index.js"
+      },
+      {
+        "name": "mdast-util-to-string",
+        "version": "1.0.0",
+        "path": "node_modules/mdast-lint/node_modules/mdast-util-to-string/index.js"
+      },
+      {
+        "name": "mdast-zone",
+        "version": "1.0.1",
+        "path": "node_modules/mdast-lint/node_modules/mdast-zone/index.js"
+      },
+      {
+        "name": "plur",
+        "version": "2.0.0",
+        "path": "node_modules/mdast-lint/node_modules/plur/index.js"
+      },
+      {
+        "name": "unist-util-visit",
+        "version": "1.0.0",
+        "path": "node_modules/mdast-lint/node_modules/unist-util-visit/index.js"
+      },
+      {
+        "name": "vfile-sort",
+        "version": "1.0.0",
+        "path": "node_modules/mdast-lint/node_modules/vfile-sort/index.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/init.coffee",
+        "lib/linter.coffee"
+      ],
+      ".js": [
+        "node_modules/mdast/index.js",
+        "node_modules/mdast/lib/cli/cli.js",
+        "node_modules/mdast/lib/cli/configuration.js",
+        "node_modules/mdast/lib/cli/file-pipeline/configure.js",
+        "node_modules/mdast/lib/cli/file-pipeline/copy.js",
+        "node_modules/mdast/lib/cli/file-pipeline/file-system.js",
+        "node_modules/mdast/lib/cli/file-pipeline/index.js",
+        "node_modules/mdast/lib/cli/file-pipeline/parse.js",
+        "node_modules/mdast/lib/cli/file-pipeline/queue.js",
+        "node_modules/mdast/lib/cli/file-pipeline/read.js",
+        "node_modules/mdast/lib/cli/file-pipeline/stdout.js",
+        "node_modules/mdast/lib/cli/file-pipeline/stringify.js",
+        "node_modules/mdast/lib/cli/file-pipeline/transform.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/configure.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/index.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/log.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/stdin.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/transform.js",
+        "node_modules/mdast/lib/cli/file-set-pipeline/traverse.js",
+        "node_modules/mdast/lib/cli/file-set.js",
+        "node_modules/mdast/lib/cli/finder.js",
+        "node_modules/mdast/lib/cli/ignore.js",
+        "node_modules/mdast/lib/cli/index.js",
+        "node_modules/mdast/lib/cli/traverser.js",
+        "node_modules/mdast/lib/defaults.js",
+        "node_modules/mdast/lib/expressions.js",
+        "node_modules/mdast/lib/parse.js",
+        "node_modules/mdast/lib/stringify.js",
+        "node_modules/mdast/lib/utilities.js",
+        "node_modules/mdast/node_modules/camelcase/index.js",
+        "node_modules/mdast/node_modules/ccount/index.js",
+        "node_modules/mdast/node_modules/chalk/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/ansi-styles/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/escape-string-regexp/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/mdast/node_modules/chalk/node_modules/supports-color/index.js",
+        "node_modules/mdast/node_modules/collapse-white-space/index.js",
+        "node_modules/mdast/node_modules/commander/index.js",
+        "node_modules/mdast/node_modules/commander/node_modules/graceful-readlink/index.js",
+        "node_modules/mdast/node_modules/concat-stream/index.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/inherits/inherits.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/inherits/inherits_browser.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/inherits/test.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/duplex.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/build/build.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/process-nextick-args/index.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/process-nextick-args/test.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/util-deprecate/browser.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/util-deprecate/node.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/passthrough.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/readable.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/transform.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/writable.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/typedarray/example/tarray.js",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/typedarray/index.js",
+        "node_modules/mdast/node_modules/debug/browser.js",
+        "node_modules/mdast/node_modules/debug/debug.js",
+        "node_modules/mdast/node_modules/debug/node.js",
+        "node_modules/mdast/node_modules/debug/node_modules/ms/index.js",
+        "node_modules/mdast/node_modules/extend.js/index.js",
+        "node_modules/mdast/node_modules/he/he.js",
+        "node_modules/mdast/node_modules/longest-streak/index.js",
+        "node_modules/mdast/node_modules/markdown-table/index.js",
+        "node_modules/mdast/node_modules/minimatch/browser.js",
+        "node_modules/mdast/node_modules/minimatch/minimatch.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/example.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
+        "node_modules/mdast/node_modules/repeat-string/index.js",
+        "node_modules/mdast/node_modules/text-table/example/align.js",
+        "node_modules/mdast/node_modules/text-table/example/center.js",
+        "node_modules/mdast/node_modules/text-table/example/dotalign.js",
+        "node_modules/mdast/node_modules/text-table/example/doubledot.js",
+        "node_modules/mdast/node_modules/text-table/example/table.js",
+        "node_modules/mdast/node_modules/text-table/index.js",
+        "node_modules/mdast/node_modules/to-vfile/index.js",
+        "node_modules/mdast/node_modules/to-vfile/lib/to-vfile.js",
+        "node_modules/mdast/node_modules/trim/index.js",
+        "node_modules/mdast/node_modules/trim-trailing-lines/index.js",
+        "node_modules/mdast/node_modules/unified/index.js",
+        "node_modules/mdast/node_modules/unified/node_modules/attach-ware/index.js",
+        "node_modules/mdast/node_modules/unified/node_modules/bail/index.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/index.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/clone/clone.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/clone/test.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/inherits/inherits.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/inherits/inherits_browser.js",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/inherits/test.js",
+        "node_modules/mdast/node_modules/user-home/index.js",
+        "node_modules/mdast/node_modules/user-home/node_modules/os-homedir/index.js",
+        "node_modules/mdast/node_modules/vfile/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/log-symbols/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/plur/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/node_modules/number-is-nan/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/node_modules/number-is-nan/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/vfile-sort/index.js",
+        "node_modules/mdast/node_modules/ware/lib/index.js",
+        "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/index.js",
+        "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/node_modules/co/index.js",
+        "node_modules/mdast-lint/index.js",
+        "node_modules/mdast-lint/lib/filter.js",
+        "node_modules/mdast-lint/lib/index.js",
+        "node_modules/mdast-lint/lib/rules/blockquote-indentation.js",
+        "node_modules/mdast-lint/lib/rules/checkbox-character-style.js",
+        "node_modules/mdast-lint/lib/rules/checkbox-content-indent.js",
+        "node_modules/mdast-lint/lib/rules/code-block-style.js",
+        "node_modules/mdast-lint/lib/rules/definition-case.js",
+        "node_modules/mdast-lint/lib/rules/definition-spacing.js",
+        "node_modules/mdast-lint/lib/rules/emphasis-marker.js",
+        "node_modules/mdast-lint/lib/rules/fenced-code-flag.js",
+        "node_modules/mdast-lint/lib/rules/fenced-code-marker.js",
+        "node_modules/mdast-lint/lib/rules/file-extension.js",
+        "node_modules/mdast-lint/lib/rules/final-definition.js",
+        "node_modules/mdast-lint/lib/rules/final-newline.js",
+        "node_modules/mdast-lint/lib/rules/first-heading-level.js",
+        "node_modules/mdast-lint/lib/rules/hard-break-spaces.js",
+        "node_modules/mdast-lint/lib/rules/heading-increment.js",
+        "node_modules/mdast-lint/lib/rules/heading-style.js",
+        "node_modules/mdast-lint/lib/rules/index.js",
+        "node_modules/mdast-lint/lib/rules/link-title-style.js",
+        "node_modules/mdast-lint/lib/rules/list-item-bullet-indent.js",
+        "node_modules/mdast-lint/lib/rules/list-item-content-indent.js",
+        "node_modules/mdast-lint/lib/rules/list-item-indent.js",
+        "node_modules/mdast-lint/lib/rules/list-item-spacing.js",
+        "node_modules/mdast-lint/lib/rules/maximum-heading-length.js",
+        "node_modules/mdast-lint/lib/rules/maximum-line-length.js",
+        "node_modules/mdast-lint/lib/rules/no-auto-link-without-protocol.js",
+        "node_modules/mdast-lint/lib/rules/no-blockquote-without-caret.js",
+        "node_modules/mdast-lint/lib/rules/no-consecutive-blank-lines.js",
+        "node_modules/mdast-lint/lib/rules/no-duplicate-definitions.js",
+        "node_modules/mdast-lint/lib/rules/no-duplicate-headings.js",
+        "node_modules/mdast-lint/lib/rules/no-emphasis-as-heading.js",
+        "node_modules/mdast-lint/lib/rules/no-file-name-articles.js",
+        "node_modules/mdast-lint/lib/rules/no-file-name-consecutive-dashes.js",
+        "node_modules/mdast-lint/lib/rules/no-file-name-irregular-characters.js",
+        "node_modules/mdast-lint/lib/rules/no-file-name-mixed-case.js",
+        "node_modules/mdast-lint/lib/rules/no-file-name-outer-dashes.js",
+        "node_modules/mdast-lint/lib/rules/no-heading-content-indent.js",
+        "node_modules/mdast-lint/lib/rules/no-heading-indent.js",
+        "node_modules/mdast-lint/lib/rules/no-heading-punctuation.js",
+        "node_modules/mdast-lint/lib/rules/no-html.js",
+        "node_modules/mdast-lint/lib/rules/no-inline-padding.js",
+        "node_modules/mdast-lint/lib/rules/no-literal-urls.js",
+        "node_modules/mdast-lint/lib/rules/no-missing-blank-lines.js",
+        "node_modules/mdast-lint/lib/rules/no-multiple-toplevel-headings.js",
+        "node_modules/mdast-lint/lib/rules/no-shell-dollars.js",
+        "node_modules/mdast-lint/lib/rules/no-shortcut-reference-image.js",
+        "node_modules/mdast-lint/lib/rules/no-shortcut-reference-link.js",
+        "node_modules/mdast-lint/lib/rules/no-table-indentation.js",
+        "node_modules/mdast-lint/lib/rules/no-tabs.js",
+        "node_modules/mdast-lint/lib/rules/ordered-list-marker-style.js",
+        "node_modules/mdast-lint/lib/rules/ordered-list-marker-value.js",
+        "node_modules/mdast-lint/lib/rules/rule-style.js",
+        "node_modules/mdast-lint/lib/rules/strong-marker.js",
+        "node_modules/mdast-lint/lib/rules/table-cell-padding.js",
+        "node_modules/mdast-lint/lib/rules/table-pipe-alignment.js",
+        "node_modules/mdast-lint/lib/rules/table-pipes.js",
+        "node_modules/mdast-lint/lib/rules/unordered-list-marker-style.js",
+        "node_modules/mdast-lint/node_modules/decamelize/index.js",
+        "node_modules/mdast-lint/node_modules/mdast-range/index.js",
+        "node_modules/mdast-lint/node_modules/mdast-util-heading-style/index.js",
+        "node_modules/mdast-lint/node_modules/mdast-util-position/index.js",
+        "node_modules/mdast-lint/node_modules/mdast-util-to-string/index.js",
+        "node_modules/mdast-lint/node_modules/mdast-zone/index.js",
+        "node_modules/mdast-lint/node_modules/plur/index.js",
+        "node_modules/mdast-lint/node_modules/unist-util-visit/index.js",
+        "node_modules/mdast-lint/node_modules/vfile-sort/index.js"
+      ],
+      ".json": [
+        "node_modules/mdast/node_modules/camelcase/package.json",
+        "node_modules/mdast/node_modules/ccount/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/ansi-styles/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/escape-string-regexp/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/has-ansi/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi/package.json",
+        "node_modules/mdast/node_modules/chalk/node_modules/supports-color/package.json",
+        "node_modules/mdast/node_modules/chalk/package.json",
+        "node_modules/mdast/node_modules/collapse-white-space/package.json",
+        "node_modules/mdast/node_modules/commander/node_modules/graceful-readlink/package.json",
+        "node_modules/mdast/node_modules/commander/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/inherits/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/process-nextick-args/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/node_modules/util-deprecate/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/package.json",
+        "node_modules/mdast/node_modules/concat-stream/node_modules/typedarray/package.json",
+        "node_modules/mdast/node_modules/concat-stream/package.json",
+        "node_modules/mdast/node_modules/debug/bower.json",
+        "node_modules/mdast/node_modules/debug/component.json",
+        "node_modules/mdast/node_modules/debug/node_modules/ms/package.json",
+        "node_modules/mdast/node_modules/debug/package.json",
+        "node_modules/mdast/node_modules/extend.js/component.json",
+        "node_modules/mdast/node_modules/extend.js/package.json",
+        "node_modules/mdast/node_modules/he/package.json",
+        "node_modules/mdast/node_modules/longest-streak/package.json",
+        "node_modules/mdast/node_modules/markdown-table/package.json",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/mdast/node_modules/minimatch/package.json",
+        "node_modules/mdast/node_modules/repeat-string/package.json",
+        "node_modules/mdast/node_modules/text-table/package.json",
+        "node_modules/mdast/node_modules/to-vfile/package.json",
+        "node_modules/mdast/node_modules/trim/component.json",
+        "node_modules/mdast/node_modules/trim/package.json",
+        "node_modules/mdast/node_modules/trim-trailing-lines/package.json",
+        "node_modules/mdast/node_modules/unified/node_modules/attach-ware/package.json",
+        "node_modules/mdast/node_modules/unified/node_modules/bail/package.json",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/clone/package.json",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/node_modules/inherits/package.json",
+        "node_modules/mdast/node_modules/unified/node_modules/unherit/package.json",
+        "node_modules/mdast/node_modules/unified/package.json",
+        "node_modules/mdast/node_modules/user-home/node_modules/os-homedir/package.json",
+        "node_modules/mdast/node_modules/user-home/package.json",
+        "node_modules/mdast/node_modules/vfile/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/log-symbols/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/plur/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/node_modules/number-is-nan/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/node_modules/number-is-nan/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/node_modules/vfile-sort/package.json",
+        "node_modules/mdast/node_modules/vfile-reporter/package.json",
+        "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/node_modules/co/package.json",
+        "node_modules/mdast/node_modules/ware/node_modules/wrap-fn/package.json",
+        "node_modules/mdast/node_modules/ware/package.json",
+        "node_modules/mdast/package.json",
+        "node_modules/mdast-lint/node_modules/decamelize/package.json",
+        "node_modules/mdast-lint/node_modules/mdast-range/package.json",
+        "node_modules/mdast-lint/node_modules/mdast-util-heading-style/package.json",
+        "node_modules/mdast-lint/node_modules/mdast-util-position/package.json",
+        "node_modules/mdast-lint/node_modules/mdast-util-to-string/package.json",
+        "node_modules/mdast-lint/node_modules/mdast-zone/package.json",
+        "node_modules/mdast-lint/node_modules/plur/package.json",
+        "node_modules/mdast-lint/node_modules/unist-util-visit/package.json",
+        "node_modules/mdast-lint/node_modules/vfile-sort/package.json",
+        "node_modules/mdast-lint/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          ""
+        ],
+        "dependencies": {
+          "mdast": "~1.1.0",
+          "mdast-lint": "~1.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast",
+          "node_modules/mdast/lib/cli",
+          "node_modules/mdast/lib/cli/file-pipeline",
+          "node_modules/mdast/lib/cli/file-set-pipeline",
+          "node_modules/mdast/lib"
+        ],
+        "dependencies": {
+          "camelcase": "^1.0.0",
+          "ccount": "^1.0.0",
+          "chalk": "^1.0.0",
+          "collapse-white-space": "^1.0.0",
+          "commander": "^2.0.0",
+          "concat-stream": "^1.0.0",
+          "debug": "^2.0.0",
+          "extend.js": "0.0.2",
+          "he": "^0.5.0",
+          "longest-streak": "^1.0.0",
+          "markdown-table": "^0.4.0",
+          "minimatch": "^2.0.0",
+          "repeat-string": "^1.5.0",
+          "text-table": "^0.2.0",
+          "to-vfile": "^1.0.0",
+          "trim": "^0.0.1",
+          "trim-trailing-lines": "^1.0.0",
+          "unified": "^1.0.0",
+          "user-home": "^2.0.0",
+          "vfile": "^1.1.0",
+          "vfile-reporter": "^1.3.0",
+          "ware": "^1.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.1.0",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/chalk/node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/chalk/node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/commander"
+        ],
+        "dependencies": {
+          "graceful-readlink": ">= 1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/concat-stream"
+        ],
+        "dependencies": {
+          "inherits": "~2.0.1",
+          "typedarray": "~0.0.5",
+          "readable-stream": "~2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream",
+          "node_modules/mdast/node_modules/concat-stream/node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "0.0.1",
+          "process-nextick-args": "~1.0.0",
+          "string_decoder": "~0.10.x",
+          "util-deprecate": "~1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/debug"
+        ],
+        "dependencies": {
+          "ms": "0.7.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/minimatch/node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.2.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/to-vfile",
+          "node_modules/mdast/node_modules/to-vfile/lib"
+        ],
+        "dependencies": {
+          "vfile": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/unified"
+        ],
+        "dependencies": {
+          "attach-ware": "^1.0.0",
+          "bail": "^1.0.0",
+          "unherit": "^1.0.4",
+          "vfile": "^1.0.0",
+          "ware": "^1.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/unified/node_modules/attach-ware"
+        ],
+        "dependencies": {
+          "unherit": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/unified/node_modules/unherit"
+        ],
+        "dependencies": {
+          "clone": "^1.0.1",
+          "inherits": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/user-home"
+        ],
+        "dependencies": {
+          "os-homedir": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.0",
+          "log-symbols": "^1.0.2",
+          "plur": "^2.0.0",
+          "repeat-string": "^1.5.0",
+          "string-width": "^1.0.0",
+          "text-table": "^0.2.0",
+          "vfile-sort": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter/node_modules/log-symbols"
+        ],
+        "dependencies": {
+          "chalk": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width"
+        ],
+        "dependencies": {
+          "code-point-at": "^1.0.0",
+          "is-fullwidth-code-point": "^1.0.0",
+          "strip-ansi": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/code-point-at"
+        ],
+        "dependencies": {
+          "number-is-nan": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/is-fullwidth-code-point"
+        ],
+        "dependencies": {
+          "number-is-nan": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/vfile-reporter/node_modules/string-width/node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/ware/lib",
+          "node_modules/mdast/node_modules/ware"
+        ],
+        "dependencies": {
+          "wrap-fn": "^0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast/node_modules/ware/node_modules/wrap-fn"
+        ],
+        "dependencies": {
+          "co": "3.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast-lint",
+          "node_modules/mdast-lint/lib",
+          "node_modules/mdast-lint/lib/rules"
+        ],
+        "dependencies": {
+          "decamelize": "^1.0.0",
+          "mdast-range": "^1.0.0",
+          "mdast-util-heading-style": "^1.0.0",
+          "mdast-util-position": "^1.0.0",
+          "mdast-util-to-string": "^1.0.0",
+          "mdast-zone": "^1.0.0",
+          "plur": "^2.0.0",
+          "unist-util-visit": "^1.0.0",
+          "vfile-sort": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast-lint/node_modules/mdast-range"
+        ],
+        "dependencies": {
+          "unist-util-visit": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mdast-lint/node_modules/mdast-zone"
+        ],
+        "dependencies": {
+          "unist-util-visit": "^1.0.0"
+        }
+      }
+    ]
+  }
+}

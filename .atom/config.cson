@@ -11,6 +11,8 @@
       "adventurous-syntax"
     ]
     audioBeep: false
+    projectHome: "/Users/imacdonald/code"
+    openEmptyEditorOnStart: false
   editor:
     invisibles: {}
     softWrap: true

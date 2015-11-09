@@ -20,6 +20,15 @@ atom-text-editor {
 
 // To style other content in the text editor's shadow DOM, use the ::shadow
 // expression
-atom-text-editor::shadow .cursor {
 
+atom-text-editor::shadow .comment {
+  color: #FC00FF;
+}
+
+atom-text-editor::shadow .selection .region {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+atom-text-editor::shadow .is-focused  .selection .region {
+  background-color: #CEFF00;
 }
