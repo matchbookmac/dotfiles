@@ -1,5 +1,9 @@
 #!/bin/sh
 
+function determine_git_repo {
+  [[ ! -z $(parse_git_branch) ]] && echo " [$(parse_git_branch)]"
+}
+
 function proml {
 
 # OPTIONAL - if you want to use any of these other colors:
@@ -41,8 +45,7 @@ function proml {
   local     DEFAULT="\[\033[0m\]"
 
   ##### CUSTOM PROMT AT PS1 and PS2
-
-  PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET$(if [[ ! -z $(echo $(parse_git_branch)) ]]; then echo " [\$(parse_git_branch)] "; fi;)$DEFAULT$LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
+  PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(determine_git_repo) $DEFAULT$LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 
 # PS1="
 #  (\___/)
