@@ -16,7 +16,6 @@ function parse_git_branch ()
 
 function gc ()
 {
-  # echo "$(parse_git_branch)"
   git commit -m "$(parse_git_branch): $1"
 }
 
