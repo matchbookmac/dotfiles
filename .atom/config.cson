@@ -21,6 +21,7 @@
     softWrap: true
     showIndentGuide: true
     fontSize: 13
+    showInvisibles: true
   minimap:
     absoluteMode: true
     minimapScrollIndicator: false

@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# show current directory and working branch for git
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
-}
-
 function proml {
 
 # OPTIONAL - if you want to use any of these other colors:
@@ -47,7 +42,7 @@ function proml {
 
   ##### CUSTOM PROMT AT PS1 and PS2
 
-  PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(parse_git_branch)$DEFAULT $LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
+  PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET$(if [[ ! -z $(echo $(parse_git_branch)) ]]; then echo " [\$(parse_git_branch)] "; fi;)$DEFAULT$LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 
 # PS1="
 #  (\___/)
