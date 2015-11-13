@@ -15,7 +15,7 @@ fi
 # reload bash_profile
 alias sb='source ~/.bash_profile'
 # edit bash_profile
-alias eb='atom ~/.bash_profile'
+alias eb='atom $DOT_DIR'
 # edit cronjobs
 alias ec='env EDITOR=nano crontab -e'
 # The jobs below are for sending snmp traps
