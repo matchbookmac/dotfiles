@@ -20,8 +20,9 @@
     invisibles: {}
     softWrap: true
     showIndentGuide: true
-    fontSize: 13
+    fontSize: 12
     showInvisibles: true
+    preferredLineLength: 120
   minimap:
     absoluteMode: true
     minimapScrollIndicator: false

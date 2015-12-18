@@ -17,6 +17,57 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
+'.source.ruby':
+  'def with comment':
+    'prefix': 'defc'
+    'body': """
+      # $3
+      #
+      # *Parameters:*
+      # - +$4+
+      #
+      # *Returns:* $5
+      #
+      def $1($2)
+        $6
+      end
+      """
+  'context':
+    'prefix': 'context'
+    'body': """
+      context '$1' do
+        $2
+      end
+      """
+  'before':
+    'prefix': 'before'
+    'body': """
+      before :$1 do
+        $2
+      end
+      """
+  'describe':
+    'prefix': 'desc'
+    'body': """
+      describe '$1' do
+        it '$2' do
+          $3
+        end
+      end
+      """
+  'it':
+    'prefix': 'it'
+    'body': """
+      it '$1' do
+        $2
+      end
+      """
+  'expect':
+    'prefix': 'expect'
+    'body': """
+      expect($1).to $2
+      """
+
 '.source.gfm':
   'console markdown':
     'prefix': 'con'
@@ -25,8 +76,6 @@
 
       ```
       """
-
-'.source.gfm':
   'ruby markdown':
     'prefix': 'rub'
     'body': """
