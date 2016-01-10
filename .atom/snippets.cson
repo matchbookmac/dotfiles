@@ -32,6 +32,22 @@
         $6
       end
       """
+  'each with do/end':
+    'prefix': 'ead'
+    'body': """
+      each do |$1|
+        $2
+      end
+    """
+  'begin rescue end':
+    'prefix': 'begin'
+    'body': """
+      begin
+        $2
+      rescue $1 => e
+        $3
+      end
+    """
   'context':
     'prefix': 'context'
     'body': """

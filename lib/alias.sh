@@ -27,6 +27,9 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 # hides hidden files in finder
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+# emacs
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+
 # logs in via ssh to amazon aws instance
 alias ec2log="ssh -i $ec2keypath $ec2user"
 
