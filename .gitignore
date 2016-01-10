@@ -4,6 +4,7 @@
 bash/secrets
 
 emacs.d/*
+emacs.d/auto-save-lists
 !emacs.d/init.el
 !emacs.d/ian
 
