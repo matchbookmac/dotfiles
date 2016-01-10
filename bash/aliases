@@ -1,0 +1,93 @@
+# -*- sh -*-
+#!/bin/sh
+
+# Personal machine config
+if [ $USER == ianmacdonald ]; then
+  # amazon ec2 user and url
+  ec2user=$(<~/.dotfiles/ec2user)
+  # git key path
+  gitkeypath=$(<~/.dotfiles/git-key-path)
+  # ec2 key path
+  ec2keypath=$(<~/.dotfiles/ec2-key-path)
+fi
+
+##### ALIASES
+
+alias gcreate='~/.scripts/git_create_repo.sh'
+
+# Git
+alias g="git status"
+alias ga="git add"
+alias gaa="git add --all ."
+#alias gc="git commit -m" see gn function below
+alias gac='git commit -a -m '
+alias gb="git branch"
+alias gba="git branch -a"
+alias gbd="git branch -d"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcot="git checkout -t"
+alias gf="git fetch"
+alias gm="git merge"
+alias gmn="git merge --no-ff"
+alias gr="git rebase"
+alias gri="git rebase -i"
+alias griu="git rebase -i @{upstream}"
+alias gl="git log"
+alias glg='git log --graph --oneline --all --decorate --remotes'
+alias glr=" git --no-pager log --graph --abbrev-commit --date=relative -10 --all --pretty='tformat:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias gs="git show"
+alias gd="git diff"
+alias gbl="git blame"
+alias gps="git push"
+alias gpsd="git push --delete"
+alias gpso="git push -u origin"
+alias gpsdo="git push --delete origin"
+alias gpl="git pull"
+
+function gc {
+  git commit -m "$(parse_git_branch): $1"
+}
+
+function gn {
+  curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
+  git remote add origin https://github.com/matchbookmac/$1
+}
+
+# Ruby
+alias r="ruby"
+alias i="irb"
+alias rk="rake"
+alias rkt="rake -T"
+alias b="bundle"
+alias be="bundle exec"
+alias bi="bundle install"
+alias bu="bundle update"
+alias berk="bundle exec rake"
+
+# Edit bash-related files
+alias sb='source ~/.bashrc' # reload bash_profile
+alias eb='e $DOT_DIR' # edit bash_profile
+alias ec='env EDITOR=nano crontab -e' # edit cronjobs
+# The jobs below are for sending snmp traps
+# */2 * * * * /Users/ianmacdonald/.scripts/send_up_snmp_trap.sh
+# 1-59/2 * * * * /Users/ianmacdonald/.scripts/send_down_snmp_trap.sh
+
+# Finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Emacs
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+
+# SSH
+alias ec2log="ssh -i $ec2keypath $ec2user" # logs in via ssh to amazon aws instance
+alias startssh="ssh-agent -s | ssh-add $gitkeypath | ssh-add $ec2keypath" # starts ssh agent and adds key, for use before working with git remote repository
+
+# PostgreSQL
+alias start_postgres="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias stop_postgres="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+
+# Other
+alias server='python -m SimpleHTTPServer 4567'
+

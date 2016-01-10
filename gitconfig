@@ -1,0 +1,15 @@
+[user]
+  email = imacdonald@rumblefish.com
+  name = Ian MacDonald
+[apply]
+  whitespace = nowarn
+[color]
+  status = auto
+  branch = auto
+  interactive = auto
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+[push]
+  default = simple
