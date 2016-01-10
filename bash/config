@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # -*- sh -*-
 
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
@@ -48,12 +47,12 @@ function parse_git_branch {
 }
 
 function determine_git_repo {
-  [[ ! -z $(parse_git_branch) ]] && echo " [$(parse_git_branch)]"
+  [[ ! -z $(parse_git_branch) ]] && echo "[$(parse_git_branch)]"
 }
 
-export PS1='> '
-#export PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(determine_git_repo) $DEFAULT$LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
+export PS1="\[$EBLACK\]\w\[$MAGENTA\] \$(determine_git_repo)\[$NO_COLOR\] \342\230\205  "
 
+#export PS1="$LIGHT_GREY\u$WHITE:$VIOLET\W$LIGHT_VIOLET\$(determine_git_repo) $DEFAULT$LIGHT_GREY|$VIOLET\j$LIGHT_GREY| <>$DEFAULT "
 export PS2='> '
 
 # History
