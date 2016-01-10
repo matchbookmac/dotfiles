@@ -1,3 +1,16 @@
+.DS_Store
+**/.DS_Store
+
+bash/secrets
+
+emacs.d/*
+!emacs.d/init.el
+!emacs.d/ian
+
+emacs.d/jeg2/loaddefs.el
+emacs.d/jeg2/settings/secrets.el
+emacs.d/jeg2/**/*.elc
+
 ec2-key-path
 ec2user
 git-key-path
