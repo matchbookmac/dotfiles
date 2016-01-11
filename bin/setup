@@ -84,6 +84,15 @@ if [ $intstall_json == true ]; then
   printf "\n*****\n\n"
 fi
 
+printf "\n*****\n\nDo you want to install vim plugins?\n"
+prompt
+install_vim_plugins=$choice
+if [ $install_vim_plugins == true ]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle &&
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  printf "\n*****\n\n"
+fi
+
 printf "\nSetup complete\n\n************\n\n"
 
 exit 1
