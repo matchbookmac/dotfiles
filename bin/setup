@@ -1,0 +1,89 @@
+#!/bin/bash
+
+cd ~
+
+if [ $USER != Guest ]; then
+  remote=true
+else
+  remote=false
+fi
+
+CODE_REPO="$HOME/code"
+DOTFILES="$CODE_REPO/dotfiles"
+
+printf "\n************\nSetting up dev\n"
+
+function prompt {
+  choice=false
+  while true; do
+    read -p "y/n? " yn
+    case $yn in
+      [Yy]* ) choice=true
+              break;;
+      [Nn]* ) break;;
+      * ) echo "y/n? ";;
+    esac
+  done
+}
+
+printf "Are you sure you want to append to the existing dotfiles on your sytem?\n"
+prompt
+link_dotfiles=$choice
+
+if [ $link_dotfiles == true ]; then
+  printf "bashrc, bash_profile, and profile\n"
+  current_bashrc=$(<~/.bashrc)
+  current_bash_profile=$(<~/.bash_profile)
+  current_profile=$(<~/.profile)
+  rm -rf ~/.bash_profile
+  rm -rf ~/.bashrc
+  rm -rf ~/.profile
+  ln -s "$DOTFILES/.bashrc" "$HOME/.bashrc"
+  ln -s "$DOTFILES/.profile" "$HOME/.profile"
+  printf "\n\n# Existing bash_profile before import on $(date)\n\n$current_bash_profile\n" >> ~/.bashrc
+  printf "\n\n# Existing bashrc before import on $(date)\n\n$current_bashrc\n" >> ~/.bashrc
+  printf "\n\n# Existing profile before import on $(date)\n\n$current_profile\n" >> ~/.profile
+  #
+  printf "vimrc\n"
+  rm -rf ~/.vimrc
+  ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
+  #
+  printf "gitconfig\n"
+  rm -rf ~/.gitconfig
+  ln -s "$DOTFILES/gitconfig" "$HOME/.gitconfig"
+  printf "railsrc\n"
+  echo "-d postgresql -T" >> ~/.railsrc
+  #
+  printf "gemrc\n\n*****\n"
+  echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
+fi
+
+function install_hb {
+  printf "Installing homebrew\n"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+function install_jq {
+  printf "Installing jq (JSON parsing on command line)\n"
+  brew install jq
+}
+
+printf "\n*****\n\nDo you want to install Homebrew?\n"
+prompt
+intstall_homebrew=$choice
+if [ $intstall_homebrew == true ]; then
+  install_hb
+  printf "\n*****\n\n"
+fi
+#
+printf "\n*****\n\nDo you want to install jq (command line JSON parsing)?\n"
+prompt
+intstall_json=$choice
+if [ $intstall_json == true ]; then
+  install_jq
+  printf "\n*****\n\n"
+fi
+
+printf "\nSetup complete\n\n************\n\n"
+
+exit 1
