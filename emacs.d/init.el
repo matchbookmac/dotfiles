@@ -19,3 +19,4 @@
 ;(jeg2/load-init-file "jeg2/init/compile")
 ;(jeg2/load-init-file "jeg2/init/autohooks")
 (ian/load-init-file "ian/init/settings")
+(ian/load-init-file "ian/init/commands")
