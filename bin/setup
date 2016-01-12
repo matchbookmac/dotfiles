@@ -70,17 +70,43 @@ function install_jq {
 
 printf "\n*****\n\nDo you want to install Homebrew?\n"
 prompt
-intstall_homebrew=$choice
-if [ $intstall_homebrew == true ]; then
+install_brew=$choice
+if [ $install_brew == true ]; then
   install_hb
   printf "\n*****\n\n"
 fi
-#
+
+printf "\n*****\n\nDo you want to install tab completion for bash?\n"
+prompt
+install_completion=$choice
+if [ $install_completion == true ]; then
+  brew install bash-completion
+  printf "\n*****\n\n"
+fi
+
 printf "\n*****\n\nDo you want to install jq (command line JSON parsing)?\n"
 prompt
-intstall_json=$choice
-if [ $intstall_json == true ]; then
+install_json=$choice
+if [ $install_json == true ]; then
   install_jq
+  printf "\n*****\n\n"
+fi
+
+printf "\n*****\n\nDo you want to install emacs?\n"
+prompt
+install_emacs=$choice
+if [ $install_emacs == true ]; then
+  brew install emacs --with-cocoa
+  brew linkapps emacs
+  printf "\n*****\n\n"
+fi
+
+printf "\n*****\n\nDo you want to remove the old (non-brew) emacs?\n"
+prompt
+remove_emacs=$choice
+if [ $remove_emacs == true ]; then
+  sudo rm /usr/bin/emacs
+  sudo rm -rf /usr/share/emacs
   printf "\n*****\n\n"
 fi
 

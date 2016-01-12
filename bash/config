@@ -58,6 +58,11 @@ export PS2='> '
 # History
 shopt -s histappend
 
+# homebrew bash completion (for git mainly)
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 # homebrew tabcomplete
 source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
