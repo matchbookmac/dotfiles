@@ -1,3 +1,6 @@
+# -*- sh -*-
+#!/bin/sh
+
 # If you run into trouble with installing gems or bundling, try putting this before command:
 # env ARCHFLAGS='-arch x86_64'
 
@@ -33,7 +36,6 @@ Hello,
 /\__\/_/___\/ / /_       __\ \_\/ / /    / / /
 \/_________/\_\___\     /____/_/\/_/     \/_/
                                                     \n"
-
 
 source ~/.xsh
 

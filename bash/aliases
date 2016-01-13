@@ -80,7 +80,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # Emacs
 alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 alias e="$DOT_DIR/bin/e"
-alias ek="emacsclient -e '(kill-emacs)'"
+alias ek="emacsclient -e '(client-save-kill-emacs)'"
+alias er="emacsclient -e '(client-save-kill-emacs)'; e"
 
 # SSH
 alias ec2log="ssh -i $ec2keypath $ec2user" # logs in via ssh to amazon aws instance
