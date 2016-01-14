@@ -1,3 +1,7 @@
+TODO:
+install xsh
+install rvm
+
 ## DOTFILES
 
 Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
