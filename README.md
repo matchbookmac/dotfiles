@@ -4,17 +4,13 @@
 
 By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
 
-@ Epicodus Programming School, Portland, OR
-
-GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald.
+GNU General Public License, version 3 (see below). Copyright (c) 2015-2016 Ian C. MacDonald.
 
 ### Description
 
 **Dotfiles**
 
-General configuration files for setting up familiar working environment on machines that are not my own.
-
-See my <a href="https://github.com/matchbookmac/shell_scripts" target="#">Shell Scripts</a> repo for automating the download and use of the files in this repository.
+Configuration files for setting up working environment.
 
 ### Author(s)
 
@@ -24,15 +20,15 @@ Ian MacDonald
 
 This app was written in `shell`.
 
-Clone These Files:
+Install:
 
 ```console
-> git clone https://github.com/matchbookmac/dotfiles.git
-
+cd dotfiles
+bin/setup
 ```
 
 ### License ###
-Copyright  (C)  2015  Ian C. MacDonald
+Copyright  (C)  2015-2016  Ian C. MacDonald
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
