@@ -105,6 +105,8 @@ if [ $install_emacs == true ]; then
   printf "\n*****\n\n"
 fi
 
+# On OSX, this might not work due to System Integrity Protection
+# on startup, hit cmd-R, go to terminal, input $ csrutil disable, then reboot
 printf "\nDo you want to remove the old (non-brew) emacs?\n"
 prompt
 remove_emacs=$choice
