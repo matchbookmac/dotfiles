@@ -1,8 +1,6 @@
 ## DOTFILES
 
-<a href="APP LINK IF APPLICABLE" target="#"><APP LINK NAME></a>
-
-By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
+Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
 
 GNU General Public License, version 3 (see below). Copyright (c) 2015-2016 Ian C. MacDonald.
 
@@ -11,10 +9,6 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015-2016 Ian C
 **Dotfiles**
 
 Configuration files for setting up working environment.
-
-### Author(s)
-
-Ian MacDonald
 
 ### Setup
 
