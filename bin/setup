@@ -38,8 +38,8 @@ if [ $link_dotfiles == true ]; then
   rm -rf ~/.bash_profile
   rm -rf ~/.bashrc
   rm -rf ~/.profile
-  ln -s "$DOTFILES/.bashrc" "$HOME/.bashrc"
-  ln -s "$DOTFILES/.profile" "$HOME/.profile"
+  ln -s "$DOTFILES/bashrc" "$HOME/.bashrc"
+  ln -s "$DOTFILES/profile" "$HOME/.profile"
   printf "\n\n# Existing bash_profile before import on $(date)\n\n$current_bash_profile\n" >> ~/.bashrc
   printf "\n\n# Existing bashrc before import on $(date)\n\n$current_bashrc\n" >> ~/.bashrc
   printf "\n\n# Existing profile before import on $(date)\n\n$current_profile\n" >> ~/.profile
@@ -47,6 +47,10 @@ if [ $link_dotfiles == true ]; then
   printf "vimrc\n"
   rm -rf ~/.vimrc
   ln -s "$DOTFILES/vimrc" "$HOME/.vimrc"
+  #
+  printf "emacs\n"
+  rm -rf ~/.emacs.d
+  ln -s "$DOTFILES/emacs.d" "$HOME/.emacs.d"
   #
   printf "gitconfig\n"
   rm -rf ~/.gitconfig
@@ -68,7 +72,7 @@ function install_jq {
   brew install jq
 }
 
-printf "\n*****\n\nDo you want to install Homebrew?\n"
+printf "\nDo you want to install Homebrew?\n"
 prompt
 install_brew=$choice
 if [ $install_brew == true ]; then
@@ -76,7 +80,7 @@ if [ $install_brew == true ]; then
   printf "\n*****\n\n"
 fi
 
-printf "\n*****\n\nDo you want to install tab completion for bash?\n"
+printf "\nDo you want to install tab completion for bash?\n"
 prompt
 install_completion=$choice
 if [ $install_completion == true ]; then
@@ -84,7 +88,7 @@ if [ $install_completion == true ]; then
   printf "\n*****\n\n"
 fi
 
-printf "\n*****\n\nDo you want to install jq (command line JSON parsing)?\n"
+printf "\nDo you want to install jq (command line JSON parsing)?\n"
 prompt
 install_json=$choice
 if [ $install_json == true ]; then
@@ -92,7 +96,7 @@ if [ $install_json == true ]; then
   printf "\n*****\n\n"
 fi
 
-printf "\n*****\n\nDo you want to install emacs?\n"
+printf "\nDo you want to install emacs?\n"
 prompt
 install_emacs=$choice
 if [ $install_emacs == true ]; then
@@ -101,16 +105,16 @@ if [ $install_emacs == true ]; then
   printf "\n*****\n\n"
 fi
 
-printf "\n*****\n\nDo you want to remove the old (non-brew) emacs?\n"
+printf "\nDo you want to remove the old (non-brew) emacs?\n"
 prompt
 remove_emacs=$choice
 if [ $remove_emacs == true ]; then
-  sudo rm /usr/bin/emacs
+  sudo rm -rf /usr/bin/emacs
   sudo rm -rf /usr/share/emacs
   printf "\n*****\n\n"
 fi
 
-printf "\n*****\n\nDo you want to install vim plugins?\n"
+printf "\nDo you want to install vim plugins?\n"
 prompt
 install_vim_plugins=$choice
 if [ $install_vim_plugins == true ]; then
