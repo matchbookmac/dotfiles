@@ -6,8 +6,6 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015-2016 Ian C
 
 ### Description
 
-**Dotfiles**
-
 Configuration files for setting up working environment.
 
 ### Setup
