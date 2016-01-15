@@ -1,6 +1,8 @@
 TODO:
 install xsh
 install rvm
+install prelude
+install aspell
 
 ## DOTFILES
 
