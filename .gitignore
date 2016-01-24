@@ -3,16 +3,10 @@
 
 bash/secrets
 
-emacs.d/*
+emacs.d/backup
+emacs.d/elpa
+emacs.d/savefile
 emacs.d/auto-save-lists
-!emacs.d/init.el
-!emacs.d/ian
-!emacs.d/jeg2
-emacs.d/ian/settings/secrets.el
-
-emacs.d/jeg2/loaddefs.el
-emacs.d/jeg2/settings/secrets.el
-emacs.d/jeg2/**/*.elc
 
 ec2-key-path
 ec2user
