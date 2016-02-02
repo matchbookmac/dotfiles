@@ -97,3 +97,6 @@ alias stop_postgres="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.po
 
 # Other
 alias server='python -m SimpleHTTPServer 4567'
+
+# Meta
+alias aliases="less $BASH_SOURCE"
