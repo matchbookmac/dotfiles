@@ -83,3 +83,12 @@ rfserver ()
 # vamp stuff for Icarus converter
 export PATH="$PATH:~/code/fugue/bin/"
 export VAMP_PATH="~/code/fugue/bin/"
+
+# db_models config
+export CONFIG_PATH="/path/to/config/git/project"
+export ENV="development"
+
+switch_env ()
+{
+    sed -E 's/export ENV="[a-z_]+"/export ENV="$1"/' <$HOME/code/dotfiles/bash/tmp >$HOME/code/dotfiles/bash/tmp
+}
