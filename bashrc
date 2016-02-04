@@ -22,20 +22,12 @@ source $DOT_DIR/bash/aliases
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-printf "
-Hello,
-          _          _                   _
-         /\ \       / /\                /\ \     _
-         \ \ \     / /  \              /  \ \   /\_\\
-         /\ \_\   / / /\ \            / /\ \ \_/ / /
-        / /\/_/  / / /\ \ \          / / /\ \___/ /
-       / / /    / / /  \ \ \        / / /  \/____/
-      / / /    / / /___/ /\ \      / / /    / / /
-     / / /    / / /_____/ /\ \    / / /    / / /
- ___/ / /__  / /_________/\ \ \  / / /    / / /
-/\__\/_/___\/ / /_       __\ \_\/ / /    / / /
-\/_________/\_\___\     /____/_/\/_/     \/_/
-                                                    \n"
+printf "Hello,
+  _____
+ |_   _|
+   | |  __ _ _ __
+   | | / _  |  _ \\
+  _| || (_| | | | |
+ |_____\__,_|_| |_|\n"
 
 source ~/.xsh
-

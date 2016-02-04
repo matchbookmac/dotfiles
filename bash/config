@@ -90,7 +90,7 @@ export ENV="development"
 
 switch_env ()
 {
-    echo $1
-    sed -i -E 's:export ENV="[a-z_]+":export ENV="'"$1"'":' $BASH_SOURCE
+    echo "Switching ENV to $1"
+    sed -E -i.tmp 's/export ENV="[a-z_]+"/export ENV="'"$1"'"/' $BASH_SOURCE
     bash
 }
