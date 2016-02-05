@@ -85,8 +85,8 @@ export PATH="$PATH:~/code/fugue/bin/"
 export VAMP_PATH="~/code/fugue/bin/"
 
 # db_models config
-export CONFIG_PATH="/path/to/config/git/project"
-export ENV="development"
+export CONFIG_PATH="$HOME/code/fugue/config/"
+export ENV="prod"
 
 switch_env ()
 {
