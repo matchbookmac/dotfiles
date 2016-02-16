@@ -76,7 +76,7 @@ source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 ftp='10.20.20.219'
 rfserver ()
 {
-  ssh -i ~/.ssh/rumblefish-vpc.pem 'ubuntu@'$1''
+  ssh -i ~/.ssh/rumblefish-ops-us-west-2.pem 'ubuntu@'$1''
 }
 # alias ftpserver="ssh -i ~/.ssh/rumblefish-vpc.pem ubuntu@10.20.20.219"
 

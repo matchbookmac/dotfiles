@@ -62,6 +62,12 @@ if [ $link_dotfiles == true ]; then
   echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
 fi
 
+function install_rvm {
+  printf "Installing rvm\n"
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  curl -sSL https://get.rvm.io | bash -s stable
+}
+
 function install_hb {
   printf "Installing homebrew\n"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -71,6 +77,14 @@ function install_jq {
   printf "Installing jq (JSON parsing on command line)\n"
   brew install jq
 }
+
+printf "\nDo you want to install rvm to manage Ruby versions?\n"
+prompt
+install_rvm=$choice
+if [ $install_rvm == true ]; then
+  install_rvm
+  printf "\n*****\n\n"
+fi
 
 printf "\nDo you want to install Homebrew?\n"
 prompt
