@@ -63,13 +63,19 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+# homebrew tabcomplete
+source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+
 # git bash completion
 if [ -f etc/git-completion.bash ]; then
   . etc/git-completion.bash
 fi
 
-# homebrew tabcomplete
-source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+#AWS CLI completion
+complete -C aws_completer aws
+
+# Docker
+eval "$(docker-machine env default)"
 
 ### RUMBLEFISH STUFFS
 # RF logins
