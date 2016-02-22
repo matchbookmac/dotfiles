@@ -89,7 +89,11 @@ alias startssh="ssh-agent -s | ssh-add $gitkeypath | ssh-add $ec2keypath" # star
 
 # RabbitMQ
 # Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this
-alias rmqrestart="rabbitmqctl stop_app && rabbitmqctl reset && rabbitmqctl start_app"
+alias rmqrl="brew services restart rabbitmq"
+
+# MYSQL
+# Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this
+alias mysqlrl="brew services restart mysql"
 
 # PostgreSQL
 alias start_postgres="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
