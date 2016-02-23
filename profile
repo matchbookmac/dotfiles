@@ -5,6 +5,6 @@ then
     source ~/.bashrc
 fi
 
-source ~/.xsh
+# source ~/.xsh
 
 

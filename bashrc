@@ -30,4 +30,4 @@ printf "Hello,
   _| || (_| | | | |
  |_____\__,_|_| |_|\n"
 
-source ~/.xsh
+# source ~/.xsh
