@@ -81,8 +81,8 @@ rfserver ()
 # alias ftpserver="ssh -i ~/.ssh/rumblefish-vpc.pem ubuntu@10.20.20.219"
 
 # vamp stuff for Icarus converter
-export PATH="$PATH:~/code/fugue/bin/"
-export VAMP_PATH="~/code/fugue/bin/"
+export PATH="$PATH:~/code/fugue/bin"
+export VAMP_PATH="~/code/fugue/bin"
 
 # db_models config
 export CONFIG_PATH="$HOME/code/fugue/config/"
