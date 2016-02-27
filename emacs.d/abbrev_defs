@@ -97,6 +97,8 @@
 
 (define-abbrev-table 'doctex-mode-abbrev-table '())
 
+(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
+
 (define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
 
 (define-abbrev-table 'elixir-mode-abbrev-table '())
@@ -120,6 +122,8 @@
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
 (define-abbrev-table 'gdb-script-mode-abbrev-table '())
+
+(define-abbrev-table 'gfm-mode-abbrev-table '())
 
 (define-abbrev-table 'global-abbrev-table '())
 
@@ -183,6 +187,36 @@
 
 (define-abbrev-table 'log-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'magit-cherry-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-diff-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-log-select-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-merge-preview-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-popup-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-process-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-reflog-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-refs-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-revision-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stash-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-stashes-mode-abbrev-table '())
+
+(define-abbrev-table 'magit-status-mode-abbrev-table '())
+
+(define-abbrev-table 'markdown-mode-abbrev-table '())
+
 (define-abbrev-table 'message-mode-abbrev-table '())
 
 (define-abbrev-table 'messages-buffer-mode-abbrev-table '())
@@ -217,9 +251,7 @@
 
 (define-abbrev-table 'python-mode-abbrev-table '())
 
-(define-abbrev-table 'python-mode-skeleton-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'python-mode-skeleton-abbrev-table '())
 
 (define-abbrev-table 'reb-lisp-mode-abbrev-table '())
 
@@ -230,6 +262,8 @@
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
 
 (define-abbrev-table 'sgml-mode-abbrev-table '())
+
+(define-abbrev-table 'sh-mode-abbrev-table '())
 
 (define-abbrev-table 'shell-mode-abbrev-table '())
 
@@ -267,6 +301,8 @@
 
 (define-abbrev-table 'url-cookie-mode-abbrev-table '())
 
+(define-abbrev-table 'vc-bzr-log-view-mode-abbrev-table '())
+
 (define-abbrev-table 'vc-dir-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
@@ -274,4 +310,6 @@
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-hg-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-svn-log-view-mode-abbrev-table '())
 

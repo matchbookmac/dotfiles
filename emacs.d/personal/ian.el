@@ -11,3 +11,5 @@
 
 ;; keybindings
 (global-set-key (kbd "C-c ;") 'ian/comment-or-uncomment-region-or-line)
+
+(setq whitespace-line-column 120) ;; limit line length

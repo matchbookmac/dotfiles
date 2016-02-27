@@ -91,8 +91,26 @@ export PATH="$PATH:~/code/fugue/bin"
 export VAMP_PATH="~/code/fugue/bin"
 
 # db_models config
-export CONFIG_PATH="$HOME/code/fugue/config/"
+export CONFIG_PATH="$HOME/code/fugue/config"
 export ENV="prod"
+
+# Fugue path for Vagrant
+export FUGUE_PATH="$HOME/code/fugue"
+
+# RF servers
+lsservers()
+{
+    echo "FTP:                    ftp.rumblefish.com"
+    echo "prod-dataprocessing-02: 10.20.22.231"
+    echo "prod-dataprocessing-01: 10.20.21.123"
+    echo "prod-megabass-01:       10.20.21.50"
+    echo "prod-megabass-slave-01: 10.20.21.114"
+}
+
+
+
+
+
 
 switch_env ()
 {

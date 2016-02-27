@@ -19,8 +19,10 @@ export CLICOLOR=1
 
 ##### MYSQL SETTINGS
 export PATH=${PATH}:/usr/local/mysql/bin
+
 ##### RabbitMQ Settings
 export PATH=$PATH:/usr/local/sbin
+
 ### HEROKU Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
