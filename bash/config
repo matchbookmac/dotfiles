@@ -74,29 +74,41 @@ fi
 #AWS CLI completion
 complete -C aws_completer aws
 
+# SSH keys
+for key in $(ls ~/.ssh/*[!.pub,known_hosts,youtube_publishing_key.pub]); do ssh-add $key &>/dev/null; done
+
 # Docker
-eval "$(docker-machine env default)"
+# eval "$(docker-machine env default)"
+eval $(docker-machine env hfa-aws-mongo)
+
+# GO
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
 
 ### RUMBLEFISH STUFFS
 rfserver ()
 {
-  ssh -i ~/.ssh/rumblefish-ops-us-west-2.pem 'ubuntu@'$1''
+  ssh -i ~/.ssh/rumblefish-ops-us-west-2.pem 'ubuntu@'$1'' $2
 }
 
 hfaserver ()
 {
-  ssh -i ~/.ssh/hfa-ops.pem 'ubuntu@'$1''
+  ssh -i ~/.ssh/hfa-ops.pem 'ubuntu@'$1'' $2
 }
 
 # RF servers
 lsservers()
 {
-    echo "FTP:                    ftp.rumblefish.com"
-    echo "prod-dataprocessing-02: 10.20.22.231"
-    echo "prod-dataprocessing-01: 10.20.21.123"
-    echo "prod-megabass-01:       10.20.21.50"
-    echo "prod-megabass-slave-01: 10.20.21.114"
-    echo "hfa dev:                54.86.198.66"
+    echo "FTP:                     ftp.rumblefish.com"
+    echo "prod-dataprocessing-02:  10.20.22.231"
+    echo "prod-dataprocessing-01:  10.20.21.123"
+    echo "prod-megabass-01:        10.20.21.50"
+    echo "prod-megabass-slave-01:  10.20.21.114"
+    echo "hfa 0:                   54.86.198.66"
+    echo "hfa 1 rabbitmq:          23.22.72.198"
+    echo "hfa 2 sesac-data-format: 50.16.130.190"
+    echo "hfa 3 mongo/express/log: 50.16.171.189"
+    echo "hfa 4 redis:             54.208.37.10"
 }
 
 # vamp stuff for Icarus converter
