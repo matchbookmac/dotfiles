@@ -57,6 +57,7 @@ function gn {
 # Ruby
 alias r="ruby"
 alias i="irb"
+alias p="pry"
 alias rk="rake"
 alias rkt="rake -T"
 alias b="bundle"
@@ -64,6 +65,8 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
 alias berk="bundle exec rake"
+alias ber="bundle exec rspec"
+alias rub="rubocop -a"
 
 # Edit bash-related files
 alias sb='source ~/.bashrc' # reload bash_profile
