@@ -66,6 +66,7 @@ alias bi="bundle install"
 alias bu="bundle update"
 alias berk="bundle exec rake"
 alias ber="bundle exec rspec"
+alias berp="bundle exec rspec -r pry"
 alias rub="rubocop -a"
 
 # Edit bash-related files
