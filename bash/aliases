@@ -109,6 +109,6 @@ alias server='python -m SimpleHTTPServer 4567'
 # Meta
 alias aliases="less $BASH_SOURCE"
 alias l_hist="history | less"
-alias ll="ls -al"
+alias ll="ls -alh"
 # cd into last listed item of pwd
 alias cdl="cd $(ls | awk 'END{print $NF}')"
