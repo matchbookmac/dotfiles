@@ -1,12 +1,6 @@
 TODO:
-brew install docker?
-brew install vagrant?
-brew install virtualbox?
 install xsh
-install rvm
 install prelude
-install aspell
-
 
 ## DOTFILES
 
@@ -26,7 +20,7 @@ Install:
 
 ```console
 cd dotfiles
-bin/setup
+./install.sh
 ```
 
 ### License ###

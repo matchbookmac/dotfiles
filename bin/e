@@ -1,4 +1,5 @@
-# !/bin/bash
+#!/bin/sh
+# -*- sh -*-
 
 # load args into an array to handle spaces
 i=0

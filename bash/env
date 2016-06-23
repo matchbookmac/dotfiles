@@ -8,7 +8,7 @@ if [ $USER == ianmacdonald ]; then
 fi
 
 # Enviroment Variables
-export EDITOR="e"
+export EDITOR="emacsclient -a '' -t "
 export GIT_EDITOR="vim"
 export LC_CTYPE=en_US.UTF-8
 export HISTSIZE=500

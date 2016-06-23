@@ -6,5 +6,3 @@ then
 fi
 
 # source ~/.xsh
-
-

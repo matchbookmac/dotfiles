@@ -1,0 +1,3 @@
+DOTFILES_DIRS=$HOME/code/dotfiles
+EXCLUDES="README.md bash bin etc Brewfile install.sh"
+SYMLINK_DIRS="emacs.d vim"

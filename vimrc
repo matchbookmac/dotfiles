@@ -1,93 +1,36 @@
-"""""""""""""""
-""" Setting """
-"""""""""""""""
+" Stolen wholesale from christoomey, whose dotfiles you really should check out:
+" https://github.com/christoomey/dotfiles
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*.vim'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
 
-set nocompatible                  " Changes other options.
+function! s:LoadPlugins()
+  call plug#begin('~/.vim/bundle')
+  source ~/.vim/plugins.vim
+  " Source `~/.vim/plugins/*`
+  " For example, `~/.vim/plugins/haskell.vim` is symlinked to `tag-haskell/vim/plugins/haskell.vim`
+  call s:SourceConfigFilesIn('plugins')
+  call plug#end()
+endfunction
 
-syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
+" Leader is <Space>
+" <Leader> must be set before `s:SourceConfigFilesIn` below
+" because leader is used at the moment mappings are defined.
+" Changing mapleader after a mapping is defined has no effect on the mapping.
+let mapleader=" "
 
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
-set ruler                         " Show cursor position.
+call s:LoadPlugins()
+call s:SourceConfigFilesIn('')
+call s:SourceConfigFilesIn('functions')
+call s:SourceConfigFilesIn('rcplugins')
 
-set backspace=indent,eol,start    " Intuitive backspacing.
-
-set hidden                        " Handle multiple buffers better.
-
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
-
-set ignorecase                    " Case-insensitive searching.
-set smartcase                     " Case-sensitive if it contains a capital.
-
-set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
-
-set nobackup                      " Don't backup before overwriting a file.
-set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location.
-
-set tabstop=2                     " Global tab width.
-set shiftwidth=2                  " And again, related.
-set expandtab                     " Use spaces instead of tabs.
-
-""""""""""""
-""" Keys """
-""""""""""""
-
-let mapleader=","
-
-"""""""""""""""
-""" Plugins """
-"""""""""""""""
-
-"
-" Install Pathogen
-" http://www.vim.org/scripts/script.php?script_id=2332
-"
-
-execute pathogen#infect() 
-
-"
-" Install Rooter
-" https://github.com/airblade/vim-rooter
-"
-
-"
-" Install NERD tree
-" http://www.vim.org/scripts/script.php?script_id=1658
-"
-
-map <Leader>n :NERDTreeToggle<CR>
-
-"
-" Install Ack.vim (requires ack)
-" http://www.vim.org/scripts/script.php%3Fscript_id%3D2572
-"
-
-map <Leader>a :Ack<space>
-
-"
-" Install Gist.vim (requires git)
-" http://www.vim.org/scripts/script.php?script_id=2423
-"
-
-map <Leader>g :Gist<space>
-
-"
-" Install Surround.vim
-" http://www.vim.org/scripts/script.php?script_id=1697
-"
-
-"
-" Install Repeat.vim
-" http://www.vim.org/scripts/script.php?script_id=2136
-"
-
-"
-" Install NERD Commenter
-" http://www.vim.org/scripts/script.php?script_id=1218
-"
-
-map <Leader>/ <plug>NERDCommenterToggle<CR>
+" vim-plug loads all the filetype, syntax and colorscheme files, so turn them on
+" _after_ loading plugins.
+filetype plugin indent on
+syntax enable
+colorscheme 1989
