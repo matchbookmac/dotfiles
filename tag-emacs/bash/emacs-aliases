@@ -1,0 +1,13 @@
+# -*- sh -*-
+#!/bin/sh
+
+# Emacs
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+alias ek="e -e '(kill-emacs)'"
+alias ekk="pkill -f emacs"
+alias er="e -e '(kill-emacs)'; e"
+
+# Edit bash-related files
+alias sb='source ~/.profile' # reload profile
+alias eb='e $DOT_DIR' # edit bash_profile
+alias ec="crontab -e" # edit cronjobs

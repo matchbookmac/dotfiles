@@ -7,16 +7,29 @@
 # Find current directory
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
-  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-  SOURCE="$(readlink "$SOURCE")"
-  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+    DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
 export DOT_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-# Include modules
-source $DOT_DIR/bash/env
-source $DOT_DIR/bash/config
-source $DOT_DIR/bash/aliases
+# BASE="$DOT_DIR/bash"
+BASE="$HOME/.bash"
+
+load_all_files_in() {
+    if [ -d "$BASE/$1" ]; then
+        for file in "$BASE/$1"/*env; do source "$file"; done
+        for file in "$BASE/$1"/*functions; do source "$file"; done
+        for file in "$BASE/$1"/*aliases; do source "$file"; done
+        for file in "$BASE/$1"/*config; do source "$file"; done
+    fi
+}
+
+# # Include modules
+load_all_files_in before
+load_all_files_in ""
+load_all_files_in after
 
 # RVM likes this in the root :(
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

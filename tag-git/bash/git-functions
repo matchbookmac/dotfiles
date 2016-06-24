@@ -1,0 +1,21 @@
+# -*- sh -*-
+#!/bin/sh
+
+
+# show current directory and working branch for git
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+function determine_git_repo {
+    [[ ! -z $(parse_git_branch) ]] && echo "[$(parse_git_branch)]"
+}
+
+function gc {
+  git commit -m "$(parse_git_branch): $@"
+}
+
+function gn {
+  curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
+  git remote add origin https://github.com/matchbookmac/$1
+}

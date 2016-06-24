@@ -1,5 +1,5 @@
-#!/bin/sh
 # -*- sh -*-
+#!/bin/sh
 
 # load args into an array to handle spaces
 i=0
@@ -9,13 +9,13 @@ for arg in "$@"; do
     i=$((i + 1))
 done
 
-if [ "$1" == "-" ]; then
-  TMP="$(mktemp /tmp/emacsstdin-XXXXXX)"
-  cat >$TMP
-  emacsclient -a "" $TMP
-  rm $TMP
-elif [ -z "$1" ]; then
-  emacsclient -a "" -t .
-else
-  emacsclient -a "" "${argv[@]}"
+if [ "$1" == "-" ]; then # open a scratch file
+    TMP="$(mktemp /tmp/emacsstdin-XXXXXX)"
+    cat >$TMP
+    emacsclient -a "" -t $TMP
+    rm $TMP
+elif [ $# -eq 0 ]; then # no args passed, open emacs in current dir
+    emacsclient -a "" -t .
+else # pass the args right on to emacs
+    emacsclient -a "" -t "${argv[@]}"
 fi

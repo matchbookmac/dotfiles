@@ -80,6 +80,8 @@ if [[ $? = 0 ]]; then
     if [ $link_dots == true ]; then
         printf "\nLinking dotfiles with rcm.\n"
         RCRC=rcrc rcup -v
+        # make bin files executable
+        chmod -R +x "$( cd -P $( dirname $BASH_SOURCE ) && pwd )/bin"
     fi
 fi
 
@@ -89,5 +91,14 @@ install_vim_stuff=$choice
 if [ $install_vim_stuff == true ]; then
     vim +PlugInstall +qa
 fi
+
+printf "\nAdd System Settings for OSX?\n(You might really want to read these first)\n"
+prompt
+sys_sets=$choice
+if [ $sys_sets == true ]; then
+    source system/osx-settings
+fi
+
+source "$HOME/.profile"
 
 printf "\nSetup complete\n\n************\n\n"

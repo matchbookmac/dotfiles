@@ -1,0 +1,18 @@
+# -*- sh -*-
+#!/bin/sh
+
+# Ruby
+alias r="ruby"
+alias i="irb"
+alias p="pry"
+alias rk="rake"
+alias rkt="rake -T"
+alias b="bundle"
+alias be="bundle exec"
+alias bi="bundle install"
+alias bu="bundle update"
+alias berk="bundle exec rake"
+alias berkc="bundle exec rake console"
+alias ber="bundle exec rspec"
+alias berp="bundle exec rspec -r pry"
+alias rub="rubocop -a"

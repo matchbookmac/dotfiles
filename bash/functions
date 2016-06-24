@@ -1,0 +1,11 @@
+# -*- sh -*-
+#!/bin/sh
+
+
+# Used to have alias server='python -m SimpleHTTPServer 4567'
+# start simple http server
+serve() {
+    port=${1:-8080}
+    open "http://localhost:$port"
+    ruby -run -e httpd . -p $port
+}
