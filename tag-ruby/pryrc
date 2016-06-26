@@ -1,12 +1,27 @@
-Pry.commands.block_command('edit!', "Edit current file if it doesn't have a class") do |line_num|
-  current_target_file = context[:pry_instance].instance_variable_get('@last_file')
+# frozen_string_literal: true
+command_set = Pry::CommandSet.new do
+  block_command 'edit!', "Edit current file if it doesn't have a class" do |line_num|
+    ctf = current_target_file(context)
 
-  if line_num
-    run "edit #{current_target_file}:#{line_num}"
-  else
-    run "edit #{current_target_file}"
+    if line_num
+      run "edit #{ctf}:#{line_num}"
+    else
+      run "edit #{ctf}"
+    end
+  end
+
+  block_command 'cat!', 'Dump current _file_' do |line_num|
+    run "cat -l #{current_target_file(context)}"
+  end
+
+  helpers do
+    def current_target_file(calling_command_context)
+      calling_command_context[:pry_instance].instance_variable_get('@last_file')
+    end
   end
 end
+
+Pry::Commands.import command_set
 
 # Monkeypatch for useful mucking about
 class Array
