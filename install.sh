@@ -87,6 +87,7 @@ printf "\nInstall Vim Packages?\n"
 prompt
 install_vim_stuff=$choice
 if [ $install_vim_stuff == true ]; then
+    mkdir -p "$HOME/.vim/bundle"
     vim +PlugInstall +qa
 fi
 
