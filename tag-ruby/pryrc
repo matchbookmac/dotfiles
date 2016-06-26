@@ -1,3 +1,13 @@
+Pry.commands.block_command('edit!', "Edit current file if it doesn't have a class") do |line_num|
+  current_target_file = context[:pry_instance].instance_variable_get('@last_file')
+
+  if line_num
+    run "edit #{current_target_file}:#{line_num}"
+  else
+    run "edit #{current_target_file}"
+  end
+end
+
 # Monkeypatch for useful mucking about
 class Array
   def self.toy

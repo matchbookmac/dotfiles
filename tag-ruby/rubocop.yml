@@ -1,0 +1,24 @@
+Documentation:
+ Enabled : false
+
+AllCops:
+  TargetRubyVersion: 2.3
+
+Metrics/LineLength:
+  Max: 120
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: aligned
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
