@@ -1,0 +1,18 @@
+# Monkeypatch for useful mucking about
+class Array
+  def self.toy
+    [1, 2, 3] + %w(a b c)
+  end
+end
+
+# Monkeypatch for useful mucking about
+class Hash
+  def self.toy
+    {
+      1 => 2,
+      'a' => 'b',
+      'foo' => 'bar',
+      :hello => 'there'
+    }
+  end
+end

@@ -21,4 +21,9 @@
 
 (setq whitespace-line-column 120) ;; limit line length
 
+;; Files that use ruby syntax
+(add-to-list 'auto-mode-alist '("\\.pryrc\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\pryrc\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Brewfile\\'" . ruby-mode))
+
 ;;; ian.el ends here
