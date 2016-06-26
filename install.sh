@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 printf "\n************\nSetting up dev\n"
 
 function prompt {
