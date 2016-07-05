@@ -95,6 +95,9 @@ echo "Show item info below desktop icons"
 echo "Enable snap-to-grid for desktop icons"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
+echo "Hide all desktop items anyway"
+defaults write com.apple.finder CreateDesktop -bool false
+
 # echo "Enable backspace-as-Back-button in Safari"
 # defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool YES
 
