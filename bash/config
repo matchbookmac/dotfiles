@@ -1,6 +1,8 @@
 #!/bin/sh
 # -*- sh -*-
 
+set -o emacs
+
 # History
 shopt -s histappend
 
