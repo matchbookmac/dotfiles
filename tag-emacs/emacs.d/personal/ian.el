@@ -11,7 +11,7 @@
 ;; use guru mode to disable noob keys
 (setq guru-warn-only nil)
 
-;; require the silver searcher
+;; require the silver searcher and dash
 (prelude-require-packages '(dash-at-point ag))
 
 ;; keybindings
@@ -37,5 +37,8 @@
 
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
+
+(setq org-agenda-files (list "~/Dropbox/org/work.org"
+                             "~/Dropbox/org/home.org"))
 
 ;;; ian.el ends here
