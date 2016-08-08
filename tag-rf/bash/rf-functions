@@ -26,3 +26,33 @@ lsservers()
     echo "hfa 3 mongo/express/log: 50.16.171.189"
     echo "hfa 4 redis:             54.208.37.10"
 }
+
+hfachat()
+{
+    case "$1" in
+        falcon)
+            open "http://bit.ly/sesac_millenium_falcon"
+            ;;
+        death)
+            open "http://bit.ly/sesac_death_star"
+            ;;
+        scrum)
+            open "http://bit.ly/sesac_scrum"
+            ;;
+        mm)
+            open "http://bit.ly/sesac_matchmaker"
+            ;;
+        front)
+            open "http://bit.ly/sesac_frontend"
+            ;;
+        back)
+            open "http://bit.ly/sesac_backend"
+            ;;
+        liink)
+            open "http://bit.ly/sesac_liink"
+            ;;
+        *)
+            open "http://bit.ly/sesac_millenium_falcon"
+            ;;
+    esac
+}
