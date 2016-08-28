@@ -23,6 +23,12 @@ cd dotfiles
 ./install.sh
 ```
 
+For Common Lisp setup, sbcl is installed with homebrew, and quicklisp should also be installed via rcup.
+See the following for more installation details.
+http://abizern.org/2013/03/31/setting-up-for-lisp-on-os-x/
+https://www.quicklisp.org/beta/
+https://common-lisp.net/project/slime/doc/html/Running.html#Running
+
 ### License ###
 Copyright  (C)  2015-2016  Ian C. MacDonald
 

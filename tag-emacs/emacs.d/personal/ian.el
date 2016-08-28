@@ -11,6 +11,9 @@
 ;; use guru mode to disable noob keys
 (setq guru-warn-only nil)
 
+;; use sbcl for Common Lisp
+(setq inferior-lisp-program "sbcl")
+
 ;; require the silver searcher and dash
 (prelude-require-packages '(dash-at-point ag))
 

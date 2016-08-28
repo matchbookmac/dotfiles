@@ -7,6 +7,9 @@ brew 'the_silver_searcher'
 # It's vim
 brew 'vim'
 
+# Common Lisp
+brew 'sbcl'
+
 # emacs
 brew 'emacs', args: ['with-cocoa']
 
