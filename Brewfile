@@ -4,6 +4,9 @@ brew 'jq'
 # a better ack/grep
 brew 'the_silver_searcher'
 
+# Check shell scripts
+brew 'shellcheck'
+
 # It's vim
 brew 'vim'
 

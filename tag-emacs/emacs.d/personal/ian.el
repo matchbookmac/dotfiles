@@ -14,8 +14,11 @@
 ;; use sbcl for Common Lisp
 (setq inferior-lisp-program "sbcl")
 
+;; JS 2 spaces for tab
+(setq js2-basic-offset 2)
+
 ;; require the silver searcher and dash
-(prelude-require-packages '(dash-at-point ag))
+(prelude-require-packages '(dash-at-point ag flycheck))
 
 ;; keybindings
 (global-set-key (kbd "C-c ;") 'ian/comment-or-uncomment-region-or-line)
