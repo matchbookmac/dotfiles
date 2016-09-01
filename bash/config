@@ -25,7 +25,7 @@ for key in $(ls ~/.ssh/*[!.pub,known_hosts,youtube_publishing_key.pub]); do ssh-
 # Docker
 # eval "$(docker-machine env default)"
 # eval $(docker-machine env hfa-aws-mongo)
-eval $(docker-machine env sesac-api-staging)
+# eval $(docker-machine env sesac-api-staging)
 
 # GO
 export GOPATH=$HOME/code/go

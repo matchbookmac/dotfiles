@@ -2,7 +2,7 @@
 # -*- sh -*-
 
 # Personal machine config
-if [ $USER == ianmacdonald ]; then
+if [ "$USER" = ianmacdonald ]; then
   # Where to find the database cluster
   export PGDATA=/usr/local/var/postgres
 fi
