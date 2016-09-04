@@ -10,7 +10,7 @@ brew 'shellcheck'
 # It's vim
 brew 'vim'
 
-# Common Lisp
+# Common Lisp, Steel Bank Common Lisp
 brew 'sbcl'
 
 # emacs
