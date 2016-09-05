@@ -24,19 +24,19 @@ git-key-path
 *.swp
 
 # Vim undodir
-vim/undodir
+**/vim/undodir
 
 .netrwhist
 
 # Ignore Vim bundles
-vim/bundle/
+**/vim/bundle/
 
 # Keep these folders...
-!vim/backups/.gitkeep
-!vim/undodir/.gitkeep
+!**/vim/backups/.gitkeep
+!**/vim/undodir/.gitkeep
 # ...but not their contents
-vim/backups/*
-vim/undodir/*
+**/vim/backups/*
+**/vim/undodir/*
 # Ignore the binary version because it will be automatically updated and
 # reloaded when words are added with `zg`
-vim/vim-spell-en.utf-8.add.spl
+**/vim/vim-spell-en.utf-8.add.spl
