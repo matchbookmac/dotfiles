@@ -6,12 +6,12 @@ ignore/
 bash/secrets
 bash/config.tmp
 
-emacs.d/backup
-emacs.d/elpa
-emacs.d/savefile
-emacs.d/auto-save-lists
+**/emacs.d/backup
+**/emacs.d/elpa
+**/emacs.d/savefile
+**/emacs.d/auto-save-lists
 
-/vim/bundle
+**/vim/bundle
 **/bundle
 **/.netrwhist
 
