@@ -14,13 +14,16 @@ hfaserver ()
 
 hfavpn ()
 {
+    host=${2:-'vpn.sesac.com'}
+    group=${3:-'EMP-Access'}
+    user=${4:-'imacdonald'}
     echo "$1" | \
     sudo openconnect \
-         --user=imacdonald \
+         --user="$user" \
          --passwd-on-stdin \
-         --authgroup=EMP-Access \
+         --authgroup="$group" \
          --no-cert-check \
-         vpn.sesac.com
+         "$host"
 }
 
 hfachat()

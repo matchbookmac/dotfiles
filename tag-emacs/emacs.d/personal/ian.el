@@ -20,6 +20,12 @@
 ;; require the silver searcher and dash
 (prelude-require-packages '(dash-at-point ag flycheck))
 
+;; cua-mode https://www.emacswiki.org/emacs/CuaMode
+(cua-mode t)
+(cua-selection-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+
 ;; keybindings
 (global-set-key (kbd "C-c ;") 'ian/comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-d d") 'dash-at-point)

@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+
+require 'pry-highlight'
+
 command_set = Pry::CommandSet.new do
   block_command 'edit!', "Edit current file if it doesn't have a class" do |line_num|
     ctf = current_target_file(context)

@@ -1,15 +1,21 @@
 # -*- sh -*-
 #!/bin/sh
 
-# # Personal machine config
-# if [ $USER == ianmacdonald ]; then
-#   # amazon ec2 user and url
-#   ec2user=$(<~/.dotfiles/ec2user)
-#   # git key path
-#   gitkeypath=$(<~/.dotfiles/git-key-path)
-#   # ec2 key path
-#   ec2keypath=$(<~/.dotfiles/ec2-key-path)
-# fi
+# Docker
+
+alias dc='docker-compose'
+alias dcr='docker-compose run'
+alias dce='docker-compose exec'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias dcp='docker-compose ps'
+alias dcs='docker-compose start'
+alias dcst='docker-compose stop'
+alias dcl='docker-compose logs -f'
+alias dcla='docker-compose logs -f --tail="all"'
+alias dcrm='docker rm $(docker ps -a -q)'
+alias dcrmi='docker rmi $(docker images -f "dangling=true" -q)'
+alias dcrmv='docker volume rm $(docker volume ls -f "dangling=true" -q)'
 
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
