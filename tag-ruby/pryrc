@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-require 'pry-highlight'
+require 'zlib'
+require 'open-uri'
+require 'fileutils'
+require 'pathname'
+require 'rubygems/package'
 
 command_set = Pry::CommandSet.new do
   block_command 'edit!', "Edit current file if it doesn't have a class" do |line_num|
@@ -25,6 +29,30 @@ command_set = Pry::CommandSet.new do
 end
 
 Pry::Commands.import command_set
+
+class MyPryHelper
+  def self.untar(archive, destination)
+    Zlib::GzipReader.open(archive) do |gz|
+      Gem::Package::TarReader.new(gz) do |tar|
+        tar.each do |entry|
+          file = Pathname.new(File.join(destination, entry.full_name))
+          file.delete if file.exist? && file.file?
+          FileUtils.mkdir_p(file.dirname)
+          if entry.file?
+            file.write(entry.read)
+            file.chmod(entry.header.mode)
+          elsif entry.header.typeflag == '2' # Symlink!
+            File.symlink(entry.header.linkname, file)
+          end
+        end
+      end
+    end
+  end
+
+  def downloads
+    Pathname.new('~/Downloads').expand_path
+  end
+end
 
 # Monkeypatch for useful mucking about
 class Array
