@@ -1,5 +1,4 @@
-#!/bin/sh
-# -*- sh -*-
+#!/bin/bash
 
 ### RUMBLEFISH STUFFS
 rfserver ()

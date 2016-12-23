@@ -1,5 +1,4 @@
-#!/bin/sh
-# -*- sh -*-
+#!/bin/bash
 
 set -o emacs
 
@@ -7,25 +6,25 @@ set -o emacs
 shopt -s histappend
 
 # homebrew bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    # shellcheck source=/dev/null
+    . "$(brew --prefix)/etc/bash_completion"
 fi
 
 # git bash completion
 if [ -f etc/git-completion.bash ]; then
-  source etc/git-completion.bash
+    # shellcheck source=/dev/null
+    source etc/git-completion.bash
 fi
 
 #AWS CLI completion
 complete -C aws_completer aws
 
 # SSH keys
-for key in $(ls ~/.ssh/*[!.pub,known_hosts,youtube_publishing_key.pub]); do ssh-add $key &>/dev/null; done
-
-# Docker
-# eval "$(docker-machine env default)"
-# eval $(docker-machine env hfa-aws-mongo)
-# eval $(docker-machine env sesac-api-staging)
+for key in "$HOME/.ssh/*[!.pub,known_hosts,youtube_publishing_key.pub]"
+do
+    ssh-add "$key" &>/dev/null
+done
 
 # GO
 export GOPATH=$HOME/code/go

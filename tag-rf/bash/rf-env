@@ -1,9 +1,8 @@
-#!/bin/sh
-# -*- sh -*-
+#!/bin/bash
 
 # vamp stuff for Icarus converter
 export PATH="$PATH:~/code/fugue/bin"
-export VAMP_PATH="~/code/fugue/bin"
+export VAMP_PATH="$HOME/code/fugue/bin"
 
 # db_models config
 export CONFIG_PATH="$HOME/code/fugue/config"

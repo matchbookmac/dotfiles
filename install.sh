@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 printf "\n************\nSetting up dev\n"
 

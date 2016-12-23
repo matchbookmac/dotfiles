@@ -1,6 +1,4 @@
-# -*- sh -*-
-#!/bin/sh
-
+#!/bin/bash
 
 # show current directory and working branch for git
 function parse_git_branch {
@@ -17,5 +15,5 @@ function gc {
 
 function gn {
   curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
-  git remote add origin https://github.com/matchbookmac/$1
+  git remote add origin "https://github.com/matchbookmac/$1"
 }

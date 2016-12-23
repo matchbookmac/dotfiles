@@ -1,5 +1,4 @@
-#!/bin/sh
-# -*- sh -*-
+#!/bin/bash
 
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # Misc

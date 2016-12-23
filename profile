@@ -1,8 +1,9 @@
-# -*- sh -*-
+#!/bin/bash
 
-if [ -f ~/.bashrc ];
+if [ -f "$HOME/.bashrc" ];
 then
-    source ~/.bashrc
+    # shellcheck source=/dev/null
+    source "$HOME/.bashrc"
 fi
 
 # source ~/.xsh

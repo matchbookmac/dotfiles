@@ -1,5 +1,4 @@
-# -*- sh -*-
-#!/bin/sh
+#!/bin/bash
 
 # Go
 export GOPATH="$HOME/code/go"
