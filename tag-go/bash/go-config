@@ -1,0 +1,5 @@
+# -*- sh -*-
+#!/bin/sh
+
+# Go
+export GOPATH="$HOME/code/go"

@@ -1,0 +1,8 @@
+# -*- sh -*-
+#!/bin/sh
+
+# Go
+alias gob="go build"
+alias goi="go install"
+alias gog="go get"
+alias got="go test"
