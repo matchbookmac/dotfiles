@@ -1,5 +1,24 @@
 #!/bin/bash
 
+# Meta
+alias aliases="less $BASH_SOURCE"
+alias l_hist="history | less"
+alias ll="ls -FGalh"
+alias ls="ls -FGh"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+alias du="du -cksh"
+alias df="df -h"
+
+alias sed="sed -E" # Use modern regex for sed
+
+alias \$=''
+alias dotfiles="cd ~/code/dotfiles/"
+
+# cd into last listed item of pwd
+alias cdl="cd $(ls | awk 'END{print $NF}')"
+
 # Docker
 
 alias dp='docker ps'
@@ -45,10 +64,3 @@ alias mysqlrl="brew services restart mysql"
 # PostgreSQL
 alias start_postgres="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias stop_postgres="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-
-# Meta
-alias aliases="less $BASH_SOURCE"
-alias l_hist="history | less"
-alias ll="ls -alh"
-# cd into last listed item of pwd
-alias cdl="cd $(ls | awk 'END{print $NF}')"
