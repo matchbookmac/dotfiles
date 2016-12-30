@@ -18,7 +18,9 @@
 (setq js2-basic-offset 2)
 
 ;; require the silver searcher and dash
-(prelude-require-packages '(dash-at-point ag flycheck))
+(prelude-require-packages '(dash-at-point ag flycheck nlinum))
+
+(setq nlinum-format "%d ")
 
 ;; cua-mode https://www.emacswiki.org/emacs/CuaMode
 (cua-mode t)
