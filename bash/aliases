@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Meta
-alias aliases="less $BASH_SOURCE"
+# shellcheck disable=SC2139
+alias aliases="less ${BASH_SOURCE[0]}"
 alias l_hist="history | less"
 alias ll="ls -FGalh"
 alias ls="ls -FGh"
@@ -17,7 +18,9 @@ alias \$=''
 alias dotfiles="cd ~/code/dotfiles/"
 
 # cd into last listed item of pwd
-alias cdl="cd $(ls | awk 'END{print $NF}')"
+alias cdl="cd \$(find . -maxdepth 1 -type d | awk 'END{print \$NF}')"
+# cd into first listed item of pwd
+alias cdf="cd \$(find . -maxdepth 1 -type d | awk 'NR==1{print \$1}')"
 
 # Docker
 
@@ -46,12 +49,6 @@ alias dcla='docker-compose logs -f --tail="all"'
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# SSH
-alias ec2log="ssh -i $ec2keypath $ec2user" # logs in via ssh to amazon aws instance
-
-# starts ssh agent and adds key, for use before working with git remote repository
-alias startssh="ssh-agent -s | ssh-add $gitkeypath | ssh-add $ec2keypath"
 
 # RabbitMQ
 # Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this

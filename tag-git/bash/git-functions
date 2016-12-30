@@ -10,10 +10,10 @@ function determine_git_repo {
 }
 
 function gc {
-  git commit -m "$(parse_git_branch): $@"
+  git commit -m "$(parse_git_branch): $*"
 }
 
 function gn {
-  curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'$1'"}'
+  curl -u matchbookmac https://api.github.com/user/repos -d '{"name":"'"$1"'"}'
   git remote add origin "https://github.com/matchbookmac/$1"
 }

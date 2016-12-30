@@ -1,11 +1,11 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 printf "\n************\nSetting up dev\n"
 
-function prompt {
+prompt() {
   choice=false
   while true; do
-    read -p "y/n? " yn
+    read -r -p "y/n? " yn
     case $yn in
       [Yy]* ) choice=true
               break;;
@@ -16,8 +16,9 @@ function prompt {
 }
 
 # Install Homebrew or update
-which -s brew
-if [[ $? != 0 ]] ; then
+
+if ! which -s brew
+then
     printf "\nDo you want to install Homebrew?\n"
     prompt
     install_brew=$choice
@@ -36,8 +37,9 @@ else
 fi
 
 # Install rvm or update
-which -s rvm
-if [[ $? != 0 ]] ; then
+
+if ! which -s rvm
+then
     printf "\nDo you want to install RVM?\n"
     prompt
     install_rvm=$choice
@@ -45,7 +47,8 @@ if [[ $? != 0 ]] ; then
         printf "Installing rvm\n"
         gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
         curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0 --gems=bundler,pry --ignore-dotfiles
-        source $HOME/.rvm/scripts/rvm
+        # shellcheck source=/dev/null
+        source "$HOME/.rvm/scripts/rvm"
         printf "\n*****\n\n"
     fi
 else
@@ -58,8 +61,9 @@ else
     fi
 fi
 
-which -s brew
-if [[ $? = 0 ]]; then
+
+if ! which -s brew
+then
     printf "\nDo you want to install Homebrew packages?\n"
     prompt
     install_pkgs=$choice
@@ -70,8 +74,9 @@ if [[ $? = 0 ]]; then
     fi
 fi
 
-which -s rcup
-if [[ $? = 0 ]]; then
+
+if ! which -s rcup
+then
     printf "\nLink dotfiles with rcm?\n"
     prompt
     link_dots=$choice
@@ -95,9 +100,11 @@ printf "\nAdd System Settings for OSX?\n(You might really want to read these fir
 prompt
 sys_sets=$choice
 if [ $sys_sets == true ]; then
+    # shellcheck source=/dev/null
     source system/osx-settings
 fi
 
+# shellcheck source=/dev/null
 source "$HOME/.profile"
 
 printf "\nSetup complete\n\n************\n\n"

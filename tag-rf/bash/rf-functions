@@ -3,12 +3,14 @@
 ### RUMBLEFISH STUFFS
 rfserver ()
 {
-  ssh -i ~/.ssh/rumblefish-ops-us-west-2.pem 'ubuntu@'$1'' $2
+    # shellcheck disable=SC2029
+    ssh -i ~/.ssh/rumblefish-ops-us-west-2.pem 'ubuntu@'"$1"'' "$2"
 }
 
 hfaserver ()
 {
-  ssh -i ~/.ssh/hfa-ops.pem 'ubuntu@'$1'' $2
+    # shellcheck disable=SC2029
+    ssh -i ~/.ssh/hfa-ops.pem 'ubuntu@'"$1"'' "$2"
 }
 
 hfavpn ()
