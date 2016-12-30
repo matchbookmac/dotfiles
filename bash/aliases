@@ -14,7 +14,7 @@ alias df="df -h"
 
 alias sed="sed -E" # Use modern regex for sed
 
-alias \$=''
+# alias -- \$=''
 alias dotfiles="cd ~/code/dotfiles/"
 
 # cd into last listed item of pwd
