@@ -15,3 +15,6 @@ augroup myfiletypes
   au BufNewFile,BufRead,BufWrite *.md,*.markdown syntax match Comment /\%^---\_.\{-}---$/
   autocmd VimResized * wincmd =
 augroup END
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
