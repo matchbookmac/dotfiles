@@ -15,6 +15,8 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 nnoremap <C-h> <C-W>h
 
+nnoremap <Leader>ex :Rex <CR>
+
 " no ex mode
 map Q <Nop>
 

@@ -21,8 +21,10 @@ fi
 complete -C aws_completer aws
 
 # SSH keys
-for key in "$HOME/.ssh/*[!.pub,known_hosts,youtube_publishing_key.pub]"
+eval "$(ssh-agent -s)"
+for key in "$HOME"/.ssh/*
 do
+    [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub)$ ]] && continue
     ssh-add "$key" &>/dev/null
 done
 
