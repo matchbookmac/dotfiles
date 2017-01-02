@@ -3,8 +3,7 @@
 
 ;;; Commentary:
 
-;;; code:
-
+;;; Code:
 ;; require extra pacakages outside of prelude
 (prelude-require-packages '(bundler rspec-mode rvm))
 
@@ -46,4 +45,5 @@
 (add-to-list 'auto-mode-alist '("\\pryrc\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\Brewfile\\'" . ruby-mode))
 
+(provide 'ruby)
 ;;; ruby.el ends here

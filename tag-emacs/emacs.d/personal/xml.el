@@ -1,10 +1,13 @@
 ;;; package --- Summary
-;; Set indent for xml documents to 2 spaces
+;; Set indent for xml documents
 
 ;;; Commentary:
-;; The module prelude-xml.el sets the indet for xml docs
-;; to 4 spaces, I prefer 2.
+;; The module prelude-xml.el sets the indet for xml docs.
 
 ;;; Code:
-(setq nxml-child-indent 2)
-(setq nxml-attribute-indent 2)
+(custom-set-variables
+ '(nxml-child-indent 4)
+ '(nxml-attribute-indent 4))
+
+(provide 'xml)
+;;; xml.el ends here

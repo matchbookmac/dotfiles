@@ -13,5 +13,7 @@
          (if (region-active-p) (region-end) (line-end-position))))
     (comment-or-uncomment-region beginning end)))
 
+(global-set-key (kbd "C-c ;") 'ian/comment-or-uncomment-region-or-line)
+
 (provide 'comments)
 ;;; comments.el ends here
