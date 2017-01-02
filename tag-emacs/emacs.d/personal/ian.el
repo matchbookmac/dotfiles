@@ -17,9 +17,12 @@
 ;; JS 2 spaces for tab
 (setq js2-basic-offset 2)
 
-;; require the silver searcher and dash
-(prelude-require-packages '(dash-at-point ag flycheck nlinum))
+;; require extra pacakages outside of prelude
+(prelude-require-packages '(dash-at-point ag flycheck nlinum yasnippet))
 
+(yas-global-mode)
+
+;; Line numbers, add space after
 (setq nlinum-format "%d ")
 
 ;; cua-mode https://www.emacswiki.org/emacs/CuaMode
@@ -35,15 +38,12 @@
 
 (setq whitespace-line-column 120) ;; limit line length
 
-;; Files that use ruby syntax
-(add-to-list 'auto-mode-alist '("\\.pryrc\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\pryrc\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Brewfile\\'" . ruby-mode))
-
 (defun copy-from-osx ()
+  "Use OSX clipboard to paste."
   (shell-command-to-string "pbpaste"))
 
 (defun paste-to-osx (text &optional push)
+  "Add kill ring entries (TEXT) to OSX clipboard.  PUSH."
   (let ((process-connection-type nil))
     (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
       (process-send-string proc text)

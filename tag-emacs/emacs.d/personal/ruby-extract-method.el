@@ -14,7 +14,7 @@
 
 (defcustom ian/ruby-refactor-keymap-prefix (kbd "C-c C-e")
   "Ruby-refactor keymap prefix."
-  :group 'ruby-refactor
+  :group 'ian/ruby-refactor
   :type 'sexp)
 
 (defvar ian/ruby-refactor-mode-map
@@ -33,6 +33,7 @@
   "Create a new ruby method given a METHOD-NAME and METHOD-BODY."
   (concat "def " method-name "\n  " method-body "\nend"))
 
+;;;###autoload
 (defun ian/ruby-extract-method ()
   "Extracts selection into method."
   (interactive)
@@ -76,6 +77,7 @@
                            (forward-paragraph)
                            (point))))))))
 
+;;;###autoload
 (define-minor-mode ian/ruby-refactor-mode
   "Ruby Refactor minor mode"
   :global nil
@@ -83,16 +85,13 @@
   :keymap ian/ruby-refactor-mode-map
   :lighter " Ian/RubyRef")
 
-(eval-after-load 'ruby-mode
-  '(progn
-     (defun ian/ruby-refactor-mode-launch ()
-       "Turn on `ruby-refactor-mode'."
-       (ian/ruby-refactor-mode 1))
+;;;###autoload
+(defun ian/ruby-refactor-mode-launch ()
+  "Turn on `ruby-refactor-mode'."
+  (ian/ruby-refactor-mode 1))
 
-     (setq ian/ruby-refactor-mode-hook 'ian/ruby-refactor-mode-launch)
-
-     (add-hook 'ruby-mode-hook (lambda ()
-                                 (run-hooks 'ian/ruby-refactor-mode-hook)))))
+;;;###autoload
+(add-hook 'ruby-mode-hook 'ian/ruby-refactor-mode-launch)
 
 (provide 'ruby-extract-method)
 ;;; ruby-extract-method.el ends here

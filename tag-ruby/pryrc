@@ -4,7 +4,13 @@ require 'zlib'
 require 'open-uri'
 require 'fileutils'
 require 'pathname'
+require 'rubygems'
 require 'rubygems/package'
+require 'pp'
+require 'time'
+require 'date'
+
+Pry.config.correct_indent = false if ENV["INSIDE_EMACS"]
 
 command_set = Pry::CommandSet.new do
   block_command 'edit!', "Edit current file if it doesn't have a class" do |line_num|
@@ -51,6 +57,21 @@ class MyPryHelper
 
   def downloads
     Pathname.new('~/Downloads').expand_path
+  end
+end
+
+def fg_boot
+  require 'factory_girl'
+  include FactoryGirl::Syntax::Methods
+end
+
+class Object
+  def local_methods(obj = self)
+    (obj.methods - obj.class.superclass.instance_methods).sort
+  end
+
+  def interesting_methods
+    (methods - Object.new.methods).sort
   end
 end
 
