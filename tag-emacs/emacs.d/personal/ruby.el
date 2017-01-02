@@ -7,6 +7,12 @@
 ;; require extra pacakages outside of prelude
 (prelude-require-packages '(bundler rspec-mode rvm))
 
+(global-set-key (kbd "C-c M-b o") 'bundle-open)
+(global-set-key (kbd "C-c M-b c") 'bundle-console)
+(global-set-key (kbd "C-c M-b i") 'bundle-install)
+(global-set-key (kbd "C-c M-b u") 'bundle-update)
+(global-set-key (kbd "C-c M-b e") 'bundle-exec)
+
 (rvm-use-default)
 
 (add-hook 'dired-mode-hook 'rspec-dired-mode)
