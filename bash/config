@@ -24,7 +24,7 @@ complete -C aws_completer aws
 eval "$(ssh-agent -s)"
 for key in "$HOME"/.ssh/*
 do
-    [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub)$ ]] && continue
+    [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub|youtube_publishing_key|yt_publishing_key.ppk)$ ]] && continue
     ssh-add "$key" &>/dev/null
 done
 
