@@ -26,6 +26,7 @@ alias gbl="git blame"
 alias gps="git push"
 alias gpsd="git push --delete"
 alias gpso="git push -u origin"
+alias gpson='gpso $(parse_git_branch)'
 alias gpsdo="git push --delete origin"
 alias gpl="git pull"
 
