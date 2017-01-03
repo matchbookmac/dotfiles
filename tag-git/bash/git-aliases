@@ -28,3 +28,6 @@ alias gpsd="git push --delete"
 alias gpso="git push -u origin"
 alias gpsdo="git push --delete origin"
 alias gpl="git pull"
+
+# Github
+eval "$(hub alias -s)"

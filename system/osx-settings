@@ -67,8 +67,8 @@ defaults write enable-spring-load-actions-on-all-items -bool true
 echo "Show indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Don’t animate opening applications from the Dock
-# defaults write com.apple.dock launchanim -bool false
+Don’t animate opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
 
 #echo "Display ASCII control characters using caret notation in standard text views"
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
@@ -97,6 +97,9 @@ echo "Enable snap-to-grid for desktop icons"
 
 echo "Hide all desktop items anyway"
 defaults write com.apple.finder CreateDesktop -bool false
+
+echo "Disable the warning before emptying the Trash"
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # echo "Enable backspace-as-Back-button in Safari"
 # defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool YES
