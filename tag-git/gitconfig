@@ -23,6 +23,5 @@
 	autosquash = true
 [commit]
 	template = ~/.gitmessage
-	edit = true
 [init]
 	templatedir = ~/.git-templates
