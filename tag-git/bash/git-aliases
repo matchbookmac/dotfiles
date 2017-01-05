@@ -8,6 +8,7 @@ alias gc="git commit"
 alias gac='git commit -a'
 alias gcs="git commit --squash"
 alias gcf="git commit --fixup"
+alias gca="git commit --amend"
 alias gb="git branch"
 alias gba="git branch -a"
 alias gbd="git branch -d"
@@ -20,6 +21,7 @@ alias gmn="git merge --no-ff"
 alias gr="git rebase"
 alias gri="git rebase -i"
 alias griu="git rebase -i @{upstream}"
+alias grpr='git rebase -i $(git merge-base $(parse_git_branch) master)'
 alias gl="git log"
 alias glg='git log --graph --oneline --all --decorate --remotes'
 alias glr=" git --no-pager log --graph --abbrev-commit --date=relative -10 --all --pretty='tformat:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
