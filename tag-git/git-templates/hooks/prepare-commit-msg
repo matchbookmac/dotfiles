@@ -1,0 +1,10 @@
+#!/bin/sh
+ORIG_MSG_FILE="$1"
+# TEMP=$(mktemp /tmp/git-XXXXX)
+
+TICKETNO=$(git branch | grep '^\*' | cut -b3-)
+
+echo "$TICKETNO"
+echo "$ORIG_MSG_FILE"
+# (echo "Work on ticket #$TICKETNO"; cat "$ORIG_MSG_FILE") > "$TEMP"
+# cat "$TEMP" > "$ORIG_MSG_FILE"
