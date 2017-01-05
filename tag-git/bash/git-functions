@@ -2,15 +2,12 @@
 
 # show current directory and working branch for git
 function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+    # git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+    git branch --no-color | grep '^\*' | cut -b 3-
 }
 
 function determine_git_repo {
     [[ ! -z $(parse_git_branch) ]] && echo "[$(parse_git_branch)]"
-}
-
-function gc {
-  git commit -m "$(parse_git_branch): $*"
 }
 
 function gn {
