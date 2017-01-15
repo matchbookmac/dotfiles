@@ -12,6 +12,7 @@ alias rm="rm -iv"
 alias du="du -cksh"
 alias df="df -h"
 alias htop="sudo htop"
+alias pag="ps aux | grep"
 
 alias sed="sed -E" # Use modern regex for sed
 

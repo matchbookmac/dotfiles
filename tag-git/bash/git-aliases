@@ -19,6 +19,7 @@ alias gf="git fetch"
 alias gm="git merge"
 alias gmn="git merge --no-ff"
 alias gr="git rebase"
+alias grc="git rebase --continue"
 alias gri="git rebase -i"
 alias griu="git rebase -i @{upstream}"
 alias grpr='git rebase -i $(git merge-base $(parse_git_branch) master)'
