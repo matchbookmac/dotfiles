@@ -37,7 +37,6 @@
 (transient-mark-mode 1)
 
 ;; keybindings
-;; (global-set-key (kbd "C-c ;") 'ian/comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-d d") 'dash-at-point)
 (global-set-key (kbd "C-c C-d e") 'dash-at-point-with-docset)
 

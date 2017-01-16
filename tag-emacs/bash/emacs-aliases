@@ -8,5 +8,5 @@ alias er="e -e '(kill-emacs)'; e"
 
 # Edit bash-related files
 alias sb='source ~/.profile' # reload profile
-alias eb='e $DOT_DIR' # edit bash_profile
+alias eb='e $DOT_DIR' # edit dotfiles
 alias ec="crontab -e" # edit cronjobs

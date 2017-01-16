@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Tmux
+alias tls="tmux ls"
+alias tlsk="tmux list-keys | less"
