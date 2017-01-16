@@ -47,3 +47,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #    | | / _  |  _ \\
 #   _| || (_| | | | |
 #  |_____\__,_|_| |_|\n"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,21 +1,25 @@
-# sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
-brew 'jq'
+# Cask: install binaries
+tap 'caskroom/cask'
 
-# a better ack/grep
-brew 'the_silver_searcher'
+# Lets us do `brew services restart postgres`, etc
+tap 'homebrew/services'
+tap 'homebrew/core'
+tap 'homebrew/versions'
 
-# Check shell scripts
-brew 'shellcheck'
+# thoughtbot stuff like rcm
+tap 'thoughtbot/formulae'
 
-# It's vim
-brew 'vim'
-
-# Common Lisp, Steel Bank Common Lisp
-brew 'sbcl'
-
-# emacs
+brew 'brew-cask'
+brew 'rcm'
 brew 'emacs', args: ['with-cocoa']
-
+brew 'vim'
+brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
+brew 'hub' # github
+brew 'battery'
+brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
+brew 'the_silver_searcher' # a better ack/grep
+brew 'fzf' # fuzzy finder
+brew 'shellcheck' # Check shell scripts
 brew 'aspell'
 brew 'awscli'
 brew 'bash-completion'
@@ -34,19 +38,8 @@ brew 'redis'
 brew 'tree'
 brew 'wget'
 brew 'bash-completion'
+brew 'pdfgrep'
 
-# Lets us do `brew services restart postgres`, etc
-tap 'homebrew/services'
-tap 'homebrew/core'
-tap 'homebrew/versions'
-
-# thoughtbot stuff like rcm
-tap 'thoughtbot/formulae'
-brew 'rcm'
-
-# Cask: install binaries
-tap 'caskroom/cask'
-brew 'brew-cask'
 cask 'alfred'
 cask 'dash'
 cask 'dropbox'
