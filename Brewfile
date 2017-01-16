@@ -13,6 +13,7 @@ brew 'brew-cask'
 brew 'rcm'
 brew 'emacs', args: ['with-cocoa']
 brew 'vim'
+brew 'tmux'
 brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
 brew 'hub' # github
 brew 'battery'

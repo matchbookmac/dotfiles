@@ -83,6 +83,7 @@
 ;;   '(rspec-install-snippets))
 
 ;; Files that use ruby syntax
+(add-to-list 'auto-mode-alist '("\\ruby\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\irbrc\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.irbrc\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.pryrc\\'" . ruby-mode))

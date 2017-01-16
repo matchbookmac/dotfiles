@@ -21,12 +21,27 @@ fi
 complete -C aws_completer aws
 
 # SSH keys
-eval "$(ssh-agent -s)"
-for key in "$HOME"/.ssh/*
-do
-    [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub|youtube_publishing_key|yt_publishing_key.ppk)$ ]] && continue
-    ssh-add "$key" &>/dev/null
-done
+
+add-ssh-keys() {
+    for key in "$HOME"/.ssh/*
+    do
+        [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub|youtube_publishing_key|yt_publishing_key.ppk)$ ]] && continue
+        ssh-add "$key" &>/dev/null
+    done
+}
+
+ssh-add -l &>/dev/null
+if [ "$?" == 2 ]; then
+    test -r ~/.ssh-agent && \
+        eval "$(<~/.ssh-agent)" >/dev/null
+
+    ssh-add -l &>/dev/null
+    if [ "$?" == 2 ]; then
+        (umask 066; ssh-agent > ~/.ssh-agent)
+        eval "$(<~/.ssh-agent)" >/dev/null
+        add-ssh-keys
+    fi
+fi
 
 # GO
 export GOPATH=$HOME/code/go

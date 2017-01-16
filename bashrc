@@ -40,12 +40,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # shellcheck source=/dev/null
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# printf "Hello,
-#   _____
-#  |_   _|
-#    | |  __ _ _ __
-#    | | / _  |  _ \\
-#   _| || (_| | | | |
-#  |_____\__,_|_| |_|\n"
-
+# FZF fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
