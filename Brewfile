@@ -14,6 +14,7 @@ brew 'rcm'
 brew 'emacs', args: ['with-cocoa']
 brew 'vim'
 brew 'tmux'
+brew 'reattach-to-user-namespace'
 brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
 brew 'hub' # github
 brew 'battery'
