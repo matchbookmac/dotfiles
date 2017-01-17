@@ -17,6 +17,7 @@ brew 'tmux'
 brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
 brew 'hub' # github
 brew 'battery'
+brew 'htop'
 brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
 brew 'the_silver_searcher' # a better ack/grep
 brew 'fzf' # fuzzy finder
