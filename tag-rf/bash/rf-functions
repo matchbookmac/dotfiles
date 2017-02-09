@@ -15,18 +15,18 @@ hfaserver ()
 
 hfavpn ()
 {
-    host=${2:-'vpn.sesac.com'}
-    group=${3:-'EMP-Access'}
+    host=${2:-'https://vpn.harryfox.com'}
+    group=${3:-'HFAVPN'}
     user=${4:-'imacdonald'}
     echo "$1" | \
     sudo openconnect \
          --user="$user" \
          --passwd-on-stdin \
          --authgroup="$group" \
-         --no-cert-check \
          "$host"
 }
 
+# --no-cert-check \
 hfachat()
 {
     case "$1" in

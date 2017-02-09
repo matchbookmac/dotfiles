@@ -41,7 +41,7 @@
 (global-set-key (kbd "C-c C-d e") 'dash-at-point-with-docset)
 
 (add-to-list 'auto-mode-alist '("/bash" . sh-mode))
-(add-to-list 'auto-mode-alist '("/sh" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.sh" . sh-mode))
 
 (provide 'ian)
 ;;; ian.el ends here

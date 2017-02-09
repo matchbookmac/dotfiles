@@ -14,7 +14,7 @@ alias df="df -h"
 alias htop="sudo htop"
 alias pag="ps aux | grep"
 
-alias sed="sed -E" # Use modern regex for sed
+# alias sed="sed -E" # Use modern regex for sed
 
 # alias -- \$=''
 alias dotfiles="cd ~/code/dotfiles/"
