@@ -30,13 +30,12 @@ add-ssh-keys() {
     done
 }
 
-ssh-add -l &>/dev/null
-if [ "$?" == 2 ]; then
+
+if ! ssh-add -l &>/dev/null; then
     test -r ~/.ssh-agent && \
         eval "$(<~/.ssh-agent)" >/dev/null
 
-    ssh-add -l &>/dev/null
-    if [ "$?" == 2 ]; then
+    if ! ssh-add -l &>/dev/null; then
         (umask 066; ssh-agent > ~/.ssh-agent)
         eval "$(<~/.ssh-agent)" >/dev/null
         add-ssh-keys
