@@ -4,6 +4,32 @@
 # This is script with useful tips taken from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
+# Don't care about pretty animations
+
+echo "Disable opening and closing window animations"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+echo "Use faster 'scale' effect"
+defaults write com.apple.dock mineffect -string scale
+
+echo "Disable the animations for opening Quick Look windows"
+defaults write -g QLPanelAnimationDuration -float 0
+
+echo "Increase window resize speed for Cocoa applications"
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+echo "Disable window animations and Get Info animations in the Finder"
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+echo "Don’t animate opening applications from the Dock"
+defaults write com.apple.dock launchanim -bool false
+
+echo "Speed up Mission Control animations"
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+echo "Remove the Dock auto-hide delay"
+defaults write com.apple.Dock autohide-delay -float 0
+
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
