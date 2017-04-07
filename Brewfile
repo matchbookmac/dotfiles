@@ -9,7 +9,8 @@ tap 'homebrew/versions'
 # thoughtbot stuff like rcm
 tap 'thoughtbot/formulae'
 
-brew 'brew-cask'
+tap 'Goles/battery'
+
 brew 'rcm'
 brew 'emacs', args: ['with-cocoa']
 brew 'vim'
@@ -53,7 +54,7 @@ cask 'firefox'
 cask 'evernote'
 cask 'iterm2'
 cask 'postman'
-cask 'dockertoolbox'
+cask 'docker'
 cask 'virtualbox'
 cask 'vagrant'
 cask 'tunnelblick'
