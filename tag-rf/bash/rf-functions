@@ -13,6 +13,17 @@ hfaserver ()
     ssh -i ~/.ssh/hfa-ops.pem 'ubuntu@'"$1"'' "$2"
 }
 
+hfatunnel ()
+{
+    IP="$1"
+    HOST=${2:-"hfa-encypted-prod.czytkzdz3oaj.us-east-1.rds.amazonaws.com"}
+    PORT=${3:-3306}
+    FWD_PORT=${4:-2000}
+
+    # shellcheck disable=SC2029
+    ssh -L "$FWD_PORT:$HOST:$PORT" ubuntu@"$IP"
+}
+
 hfavpn ()
 {
     host=${2:-'https://vpn.harryfox.com'}
