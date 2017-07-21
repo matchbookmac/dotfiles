@@ -42,6 +42,5 @@ if ! ssh-add -l &>/dev/null; then
     fi
 fi
 
-# GO
-export GOPATH=$HOME/code/go
-export PATH=$PATH:$GOPATH/bin
+# GNU get-opt
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"

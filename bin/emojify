@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+url=$1;
+output=${2-output.png};
+size=${3-128};
+
+curl --silent -kL "$url" | convert - -resize "${size}x${size}" "$output";

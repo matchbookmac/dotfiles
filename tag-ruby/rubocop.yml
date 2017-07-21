@@ -7,15 +7,15 @@ AllCops:
 Metrics/LineLength:
   Max: 120
 
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: aligned
+
 Style/BlockDelimiters:
   EnforcedStyle: semantic
 
 Style/MultilineBlockChain:
   Enabled: false
-
-Style/MultilineMethodCallIndentation:
-  Enabled: true
-  EnforcedStyle: aligned
 
 Style/AndOr:
   EnforcedStyle: conditionals
