@@ -39,6 +39,19 @@
 ;; keybindings
 (global-set-key (kbd "C-c C-d d") 'dash-at-point)
 (global-set-key (kbd "C-c C-d e") 'dash-at-point-with-docset)
+(global-set-key (kbd "M-g g") 'goto-line)
+
+;; Show line numbers when using goto-line
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
+
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input."
+  (interactive)
+  (unwind-protect
+      (progn
+        (nlinum-mode 1)
+        (goto-line (read-number "Goto line: ")))
+    (nlinum-mode -1)))
 
 (add-to-list 'auto-mode-alist '("/bash" . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.sh" . sh-mode))
