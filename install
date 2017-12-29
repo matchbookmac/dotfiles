@@ -4,15 +4,13 @@ printf "\n************\nSetting up dev\n"
 
 prompt() {
   choice=false
-  while true; do
-    read -r -p "y/n? " yn
-    case $yn in
+  read -r -p "y/n? " yn
+  case $yn in
       [Yy]* ) choice=true
               break;;
       [Nn]* ) break;;
-      * ) echo "y/n? ";;
-    esac
-  done
+      * );;
+  esac
 }
 
 # Install Homebrew or update
