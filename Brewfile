@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Cask: install binaries
 tap 'caskroom/cask'
 
@@ -11,57 +13,68 @@ tap 'thoughtbot/formulae'
 
 tap 'Goles/battery'
 
-brew 'rcm'
-brew 'emacs', args: ['with-cocoa']
-brew 'vim'
-brew 'tmux'
-brew 'reattach-to-user-namespace'
-brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
-brew 'hub' # github
-brew 'battery'
-brew 'htop'
-brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
-brew 'the_silver_searcher' # a better ack/grep
-brew 'fzf' # fuzzy finder
-brew 'shellcheck' # Check shell scripts
 brew 'aspell'
 brew 'awscli'
-brew 'bash-completion'
-brew 'icu4c'
+brew 'bash'
+brew 'bash-completion@2'
+brew 'battery'
+brew 'ctags'
+brew 'emacs', args: ['with-cocoa']
 brew 'erlang'
+brew 'freetype'
+brew 'fzf' # fuzzy finder
+brew 'git'
+brew 'gnutils'
 brew 'go'
-brew 'openssl'
-brew 'openconnect'
-brew 'sqlite'
-brew 'python'
-brew 'mysql'
-brew 'nginx'
+brew 'htop'
+brew 'hub' # github
+brew 'icu4c'
+brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
 brew 'node'
-brew 'perl'
-brew 'rabbitmq'
-brew 'redis'
-brew 'tree'
-brew 'wget'
-brew 'bash-completion'
+brew 'openconnect'
+brew 'openssl'
+brew 'openvpn'
+brew 'pcre'
 brew 'pdfgrep'
+brew 'perl'
+brew 'protobuf'
+brew 'python'
+brew 'rcm'
+brew 'readline'
+brew 'reattach-to-user-namespace'
+brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
+brew 'shellcheck' # Check shell scripts
+brew 'sqlite'
+brew 'the_silver_searcher' # a better ack/grep
+brew 'tmux'
+brew 'tree'
+brew 'vim'
+brew 'wget'
 
+cask '1password'
 cask 'alfred'
+cask 'cyberduck'
 cask 'dash'
+cask 'dbvisualizer'
+cask 'docker'
 cask 'dropbox'
-cask 'google-chrome'
-cask 'vlc'
+cask 'evernote'
 cask 'filezilla'
 cask 'firefox'
-cask 'evernote'
-cask 'iterm2'
+cask 'font-fira-code'
+cask 'google-chrome'
 cask 'postman'
-cask 'docker'
-cask 'virtualbox'
-cask 'vagrant'
-cask 'tunnelblick'
-cask 'slack'
-cask 'sizeup'
-cask 'screenhero'
+cask 'psequel'
+cask 'rescuetime'
 cask 'sequel-pro'
-cask '1password'
+cask 'sizeup'
 cask 'skype'
+cask 'slack'
+cask 'spotify'
+cask 'tunnelblick'
+cask 'tuntap'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'wkhtmltopdf'
