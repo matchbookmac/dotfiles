@@ -42,7 +42,7 @@ then
     if [ "$install_rvm" == true ]; then
         printf "Installing rvm\n"
         gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-        curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0 --gems=bundler,pry,dotenv --ignore-dotfiles
+        curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0,2.4.2,2.5.0 --gems=bundler,pry,dotenv --ignore-dotfiles
         # shellcheck source=/dev/null
         source "$HOME/.rvm/scripts/rvm"
         printf "\n*****\n\n"
@@ -70,18 +70,14 @@ if [ "$name_of_curr_dir" != 'dotfiles' ]; then
     fi
 fi
 
-if ! which -s brew
-then
-    printf "\nDo you want to install Homebrew packages?\n"
-    prompt
-    install_pkgs=$choice
-    if [ "$install_pkgs" == true ]; then
-        brew update
-        brew tap homebrew/bundle
-        brew bundle
-    fi
+printf "\nDo you want to install Homebrew packages?\n"
+prompt
+install_pkgs=$choice
+if [ "$install_pkgs" == true ]; then
+    brew update
+    brew tap homebrew/bundle
+    brew bundle
 fi
-
 
 if ! which -s rcup
 then

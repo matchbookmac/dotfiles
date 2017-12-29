@@ -19,7 +19,7 @@ This app was written in `shell`.
 Fast:
 
 ``` console
-curl -fsSL "https://raw.githubusercontent.com/matchbookmac/dotfiles/master/install?$(date +%s)" > install && bash -i install`
+curl -fsSL "https://raw.githubusercontent.com/matchbookmac/dotfiles/master/install?$(date +%s)" > install && bash -i install
 ```
 
 Clone install:
