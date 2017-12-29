@@ -79,7 +79,7 @@ if [ "$install_pkgs" == true ]; then
     brew bundle
 fi
 
-if ! which -s rcup
+if which -s rcup
 then
     printf "\nLink dotfiles with rcm?\n"
     prompt
