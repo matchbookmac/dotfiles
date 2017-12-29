@@ -6,10 +6,12 @@ set -o emacs
 shopt -s histappend
 
 # homebrew bash completion
-if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-    # shellcheck source=/dev/null
-    . "$(brew --prefix)/etc/bash_completion"
-fi
+# Add tab completion for bash completion 2
+if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+    source "$(brew --prefix)/share/bash-completion/bash_completion";
+elif [[ -f /etc/bash_completion ]]; then
+    source /etc/bash_completion;
+fi;
 
 # git bash completion
 if [ -f etc/git-completion.bash ]; then
@@ -19,28 +21,3 @@ fi
 
 #AWS CLI completion
 complete -C aws_completer aws
-
-# SSH keys
-
-add-ssh-keys() {
-    for key in "$HOME"/.ssh/*
-    do
-        [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub|youtube_publishing_key|yt_publishing_key.ppk)$ ]] && continue
-        ssh-add "$key" &>/dev/null
-    done
-}
-
-
-if ! ssh-add -l &>/dev/null; then
-    test -r ~/.ssh-agent && \
-        eval "$(<~/.ssh-agent)" >/dev/null
-
-    if ! ssh-add -l &>/dev/null; then
-        (umask 066; ssh-agent > ~/.ssh-agent)
-        eval "$(<~/.ssh-agent)" >/dev/null
-        add-ssh-keys
-    fi
-fi
-
-# GNU get-opt
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"

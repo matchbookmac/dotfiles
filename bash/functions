@@ -7,3 +7,13 @@ serve() {
     open "http://localhost:$port"
     ruby -run -e httpd . -p "$port"
 }
+
+# SSH keys
+
+add-ssh-keys() {
+    for key in "$HOME"/.ssh/*
+    do
+        [[ "$key" =~ .*(.csv|.pub|known_hosts|authorized_keys|youtube_publishing_key.pub|youtube_publishing_key|yt_publishing_key.ppk)$ ]] && continue
+        ssh-add "$key" &>/dev/null
+    done
+}

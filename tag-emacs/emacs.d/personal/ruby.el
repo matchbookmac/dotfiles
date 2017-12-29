@@ -22,10 +22,13 @@
 (require 'emamux-ruby-test)
 (add-hook 'ruby-mode-hook 'emamux-ruby-test-mode)
 
-(global-set-key (kbd "M-g") emamux:keymap)
+(global-set-key (kbd "C-z") emamux:keymap)
 
 (custom-set-variables
  '(emamux-ruby-test-keymap-prefix (kbd "C-c C-t")))
+
+(autoload 'turn-on-ctags-auto-update-mode "ctags-update" "turn on 'ctags-auto-update-mode'." t)
+(add-hook 'ruby-mode-hook  'turn-on-ctags-auto-update-mode)
 
 ;; (defun ian-ruby-mode-defaults ()
 ;;   "Turn of inf ruby and ruby tools."

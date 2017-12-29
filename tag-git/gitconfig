@@ -1,6 +1,8 @@
 [user]
   email = imacdonald@rumblefish.com
   name = Ian MacDonald
+[core]
+  excludesfile = ~/.gitignore_global
 [apply]
   whitespace = nowarn
 [color]
@@ -12,16 +14,16 @@
   bare = false
   logallrefupdates = true
 [push]
-	default = simple
+  default = simple
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
 [rebase]
-	autosquash = true
+  autosquash = true
 [commit]
-	template = ~/.gitmessage
+  template = ~/.gitmessage
 [init]
-	templatedir = ~/.git-templates
+  templatedir = ~/.git-templates

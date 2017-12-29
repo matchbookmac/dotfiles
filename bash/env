@@ -16,8 +16,11 @@ export HISTCONTROL=erasedups
 export PROMPT_COMMAND='history -a'  # write previous line as prompt is displayed
 export CLICOLOR=1
 
+# GNU get-opt
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
 # make dot dir bin part of path
-export PATH=$PATH:"$DOT_DIR/bin"
+export PATH=${PATH}:"$DOT_DIR/bin"
 
 ##### MYSQL SETTINGS
 export PATH=${PATH}:/usr/local/mysql/bin
