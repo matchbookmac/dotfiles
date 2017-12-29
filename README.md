@@ -16,7 +16,13 @@ Configuration files for setting up working environment.
 
 This app was written in `shell`.
 
-Install:
+Fast:
+
+``` console
+curl -fsSL "https://raw.githubusercontent.com/matchbookmac/dotfiles/master/install?$(date +%s)" > install && bash -i install`
+```
+
+Clone install:
 
 ```console
 cd dotfiles
