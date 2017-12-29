@@ -24,7 +24,6 @@ brew 'erlang'
 brew 'freetype'
 brew 'fzf' # fuzzy finder
 brew 'git'
-brew 'gnutils'
 brew 'go'
 brew 'htop'
 brew 'hub' # github
