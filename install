@@ -6,9 +6,7 @@ prompt() {
   choice=false
   read -r -p "y/n? " yn
   case $yn in
-      [Yy]* ) choice=true
-              break;;
-      [Nn]* ) break;;
+      [Yy]* ) choice=true;;
       * );;
   esac
 }
