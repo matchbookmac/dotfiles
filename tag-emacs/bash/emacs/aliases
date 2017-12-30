@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Emacs
-alias emacs="/usr/local/Cellar/emacs/25.3/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="emacs -nw"
 alias ek="e -e '(kill-emacs)'"
 alias ekk="pkill -f emacs"
 alias er="e -e '(kill-emacs)'; e"
