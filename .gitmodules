@@ -3,4 +3,4 @@
 	url = https://github.com/tmux-plugins/tpm
 [submodule "tag-emacs/emacs.d"]
 	path = tag-emacs/emacs.d
-	url = git://github.com/bbatsov/prelude.git
+	url = git://github.com/matchbookmac/prelude.git
