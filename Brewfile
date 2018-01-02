@@ -30,6 +30,7 @@ brew 'htop'
 brew 'hub' # github
 brew 'icu4c'
 brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
+brew 'libressl'
 brew 'node'
 brew 'openconnect'
 brew 'openssl'
@@ -38,10 +39,11 @@ brew 'pcre'
 brew 'pdfgrep'
 brew 'perl'
 brew 'protobuf'
-brew 'python'
+brew 'pyenv'
 brew 'rcm'
 brew 'readline'
 brew 'reattach-to-user-namespace'
+brew 'nvm'
 brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
 brew 'shellcheck' # Check shell scripts
 brew 'sqlite'

@@ -1,33 +1,7 @@
-# sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
-brew 'jq'
+# frozen_string_literal: true
 
-# a better ack/grep
-brew 'the_silver_searcher'
-
-# It's vim
-brew 'vim'
-
-# emacs
-brew 'emacs', args: ['with-cocoa']
-
-brew 'aspell'
-brew 'awscli'
-brew 'bash-completion'
-brew 'icu4c'
-brew 'erlang'
-brew 'go'
-brew 'openssl'
-brew 'sqlite'
-brew 'python'
-brew 'mysql'
-brew 'nginx'
-brew 'node'
-brew 'perl'
-brew 'rabbitmq'
-brew 'redis'
-brew 'tree'
-brew 'wget'
-brew 'bash-completion'
+# Cask: install binaries
+tap 'caskroom/cask'
 
 # Lets us do `brew services restart postgres`, etc
 tap 'homebrew/services'
@@ -36,28 +10,70 @@ tap 'homebrew/versions'
 
 # thoughtbot stuff like rcm
 tap 'thoughtbot/formulae'
-brew 'rcm'
 
-# Cask: install binaries
-tap 'caskroom/cask'
-brew 'brew-cask'
+tap 'Goles/battery'
+tap 'caskroom/fonts'
+
+brew 'aspell'
+brew 'awscli'
+brew 'bash'
+brew 'bash-completion@2'
+brew 'battery'
+brew 'ctags'
+brew 'emacs', args: ['with-cocoa']
+brew 'erlang'
+brew 'freetype'
+brew 'fzf' # fuzzy finder
+brew 'git'
+brew 'go'
+brew 'htop'
+brew 'hub' # github
+brew 'icu4c'
+brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
+brew 'libressl'
+brew 'node'
+brew 'openconnect'
+brew 'openssl'
+brew 'openvpn'
+brew 'pcre'
+brew 'pdfgrep'
+brew 'perl'
+brew 'protobuf'
+brew 'pyenv'
+brew 'rcm'
+brew 'readline'
+brew 'reattach-to-user-namespace'
+brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
+brew 'shellcheck' # Check shell scripts
+brew 'sqlite'
+brew 'the_silver_searcher' # a better ack/grep
+brew 'tmux'
+brew 'tree'
+brew 'vim'
+brew 'wget'
+
+cask '1password'
 cask 'alfred'
+cask 'cyberduck'
 cask 'dash'
+cask 'dbvisualizer'
+cask 'docker'
 cask 'dropbox'
-cask 'google-chrome'
-cask 'vlc'
 cask 'filezilla'
 cask 'firefox'
-cask 'evernote'
-cask 'iterm2'
+cask 'font-fira-code'
+cask 'google-chrome'
 cask 'postman'
-cask 'dockertoolbox'
-cask 'virtualbox'
-cask 'vagrant'
-cask 'tunnelblick'
-cask 'slack'
-cask 'sizeup'
-cask 'screenhero'
+cask 'psequel'
+cask 'rescuetime'
 cask 'sequel-pro'
-cask '1password'
+cask 'sizeup'
 cask 'skype'
+cask 'slack'
+cask 'spotify'
+cask 'tunnelblick'
+cask 'tuntap'
+cask 'vagrant'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'wkhtmltopdf'

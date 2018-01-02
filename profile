@@ -12,6 +12,7 @@ load_all_files_in "" before
 load_all_files_in ruby
 load_all_files_in go
 load_all_files_in node
+load_all_files_in python
 load_all_files_in git
 load_all_files_in rf
 load_all_files_in emacs
