@@ -67,6 +67,7 @@ if [ "$name_of_curr_dir" != 'dotfiles' ]; then
         cd "$HOME/code"
         git clone 'https://github.com/matchbookmac/dotfiles.git'
         cd dotfiles
+        git submodule update --init
     fi
 fi
 
