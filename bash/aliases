@@ -16,6 +16,8 @@ alias pag="ps aux | grep"
 
 # alias sed="sed -E" # Use modern regex for sed
 
+alias ctags="$(brew --prefix)/bin/ctags"
+
 # alias -- \$=''
 alias dotfiles="cd ~/code/dotfiles/"
 
