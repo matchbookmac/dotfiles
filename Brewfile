@@ -30,6 +30,7 @@ brew 'hub' # github
 brew 'icu4c'
 brew 'jq' # sed for json: https://robots.thoughtbot.com/jq-is-sed-for-json
 brew 'libressl'
+brew 'mysql'
 brew 'node'
 brew 'nvm'
 brew 'openconnect'
