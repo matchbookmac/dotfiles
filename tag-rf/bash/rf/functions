@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 
 ### RUMBLEFISH STUFFS
 rfserver ()
@@ -35,6 +35,25 @@ hfavpn ()
          --passwd-on-stdin \
          --authgroup="$group" \
          "$host"
+}
+
+siren-calc ()
+{
+    REQUESTED_ENV=${1:-qa}
+    TEST_URL="https://xft1dx9zyk.execute-api.us-east-1.amazonaws.com/qa/calculator_runs" # QA
+    PROD_URL="https://3znqssvt8j.execute-api.us-east-1.amazonaws.com/prod/calculator_runs"
+
+    if test "$REQUESTED_ENV" = prod; then
+        TEST_URL="$PROD_URL"
+    fi
+
+    STATUS=$(curl -s -w "%{http_code}\\n" "$TEST_URL")
+    if test "$STATUS" = 200; then
+        echo "Calculation running!"
+    else
+        echo "No calculation running"
+    fi
+
 }
 
 # --no-cert-check \

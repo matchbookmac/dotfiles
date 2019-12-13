@@ -13,11 +13,5 @@ elif [[ -f /etc/bash_completion ]]; then
     source /etc/bash_completion;
 fi;
 
-# git bash completion
-if [ -f etc/git-completion.bash ]; then
-    # shellcheck source=/dev/null
-    source etc/git-completion.bash
-fi
-
 #AWS CLI completion
 complete -C aws_completer aws

@@ -5,9 +5,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # shellcheck source=/dev/null
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# FZF fuzzy finder
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # Find current directory
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -36,3 +33,14 @@ load_all_files_in() {
 # Include modules
 load_all_files_in
 load_all_files_in tmux
+
+# load after other completions
+# FZF fuzzy finder
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/serverless.bash ] && . /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/sls.bash

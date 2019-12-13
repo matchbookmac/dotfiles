@@ -1,8 +1,9 @@
 [user]
-  email = imacdonald@rumblefish.com
-  name = Ian MacDonald
+	email = imacdonald@rumblefish.com
+	name = Ian MacDonald
 [core]
   excludesfile = ~/.gitignore_global
+  autocrlf = input
 [apply]
   whitespace = nowarn
 [color]
@@ -17,13 +18,18 @@
   default = simple
 [credential]
 	helper = osxkeychain
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  required = true
 [rebase]
   autosquash = true
 [commit]
   template = ~/.gitmessage
 [init]
   templatedir = ~/.git-templates
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+	process = git-lfs filter-process
+[remote "origin"]
+  prune = true
+[alias]
+	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)%09%(color:red)%(authorname)%09%(color:black)%(color:bold)%(refname:short)\" refs/remotes

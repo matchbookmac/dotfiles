@@ -4,8 +4,8 @@
 # shellcheck disable=SC2139
 alias aliases="less ${BASH_SOURCE[0]}"
 alias l_hist="history | less"
-alias ll="ls -FGalh"
-alias ls="ls -FGh"
+alias ll="ls -FGalh --color"
+alias ls="ls -FGh --color"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
@@ -14,7 +14,7 @@ alias df="df -h"
 alias htop="sudo htop"
 alias pag="ps aux | grep"
 
-# alias sed="sed -E" # Use modern regex for sed
+# alias sed="gsed -E" # Use modern regex for sed
 
 alias ctags="$(brew --prefix)/bin/ctags"
 
@@ -35,6 +35,7 @@ alias dia='docker images -a'
 alias dv='docker volume ls'
 alias dva='docker volume ls'
 alias drm='docker rm $(docker ps -a -q)'
+alias drme='docker rm $(docker ps -a -q -f "status=exited")'
 alias drmi='docker rmi $(docker images -f "dangling=true" -q)'
 alias drmv='docker volume rm $(docker volume ls -f "dangling=true" -q)'
 

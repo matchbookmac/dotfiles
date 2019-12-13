@@ -24,6 +24,7 @@ brew 'erlang'
 brew 'freetype'
 brew 'fzf' # fuzzy finder
 brew 'git'
+brew 'git-lfs'
 brew 'go'
 brew 'htop'
 brew 'hub' # github
@@ -44,6 +45,7 @@ brew 'pyenv'
 brew 'rcm'
 brew 'readline'
 brew 'reattach-to-user-namespace'
+brew 'rustup'
 brew 'sbcl' # Common Lisp, Steel Bank Common Lisp
 brew 'shellcheck' # Check shell scripts
 brew 'sqlite'

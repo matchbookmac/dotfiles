@@ -1,4 +1,4 @@
 DOTFILES_DIRS=$HOME/code/dotfiles
-EXCLUDES="README.md etc bin Brewfile install system"
+EXCLUDES="README.md etc bin Brewfile install system TAGS"
 SYMLINK_DIRS="emacs.d backups bundle undodir git-templates vim quicklisp"
-TAGS="emacs git prompt rf ruby python vim mysql lisp go tmux node"
+TAGS="emacs git prompt rf ruby rust python vim mysql lisp go tmux node"
