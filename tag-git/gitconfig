@@ -16,8 +16,12 @@
   logallrefupdates = true
 [push]
   default = simple
-[credential]
-	helper = osxkeychain
+[credential "https://git-codecommit.us-east-1.amazonaws.com"]
+  helper = 
+  helper = !aws2 --profile mlc-proc-ss codecommit credential-helper $@
+  UseHttpPath = true
+[credential "https://github.com"]
+  helper = osxkeychain
 [rebase]
   autosquash = true
 [commit]

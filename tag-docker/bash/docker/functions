@@ -1,0 +1,17 @@
+#!/bin/bash
+
+docker_exec=$(command -v docker)
+
+function basher() {
+    if [[ $1 = 'run' ]]
+    then
+        shift
+        $docker_exec run -e \
+                        HIST_FILE=/root/.bash_history \
+                        -v "$HOME/.bash_history:/root/.bash_history" \
+                        "$@"
+    else
+        $docker_exec "$@"
+    fi
+}
+alias docker=basher

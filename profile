@@ -9,6 +9,7 @@ fi
 
 # Include modules
 load_all_files_in "" before
+load_all_files_in docker
 load_all_files_in go
 load_all_files_in node
 load_all_files_in python

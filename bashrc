@@ -44,3 +44,4 @@ load_all_files_in tmux
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/sls.bash ] && . /Users/imacdonald/code/samba-serverless/node_modules/tabtab/.completions/sls.bash
+complete -C /usr/local/bin/terraform terraform

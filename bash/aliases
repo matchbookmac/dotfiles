@@ -54,15 +54,3 @@ alias dcla='docker-compose logs -f --tail="all"'
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# RabbitMQ
-# Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this
-alias rmqrl="brew services restart rabbitmq"
-
-# MYSQL
-# Restarts rabbitmq and deletes all queues, exchanges, etc. Make sure you want to do this
-alias mysqlrl="brew services restart mysql"
-
-# PostgreSQL
-alias start_postgres="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-alias stop_postgres="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
