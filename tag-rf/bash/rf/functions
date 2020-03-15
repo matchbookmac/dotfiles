@@ -27,21 +27,21 @@ hfatunnel ()
 hfavpn ()
 {
     host=${2:-'https://vpn.harryfox.com'}
-    # group=${3:-'HFAVPN'}
-    group=${3:-'EMP-Access'}
+    group=${3:-'HFAVPN'}
+    # group=${3:-'EMP-Access'}
     user=${4:-'imacdonald'}
     echo "$1" | \
     sudo openconnect \
          --user="$user" \
          --passwd-on-stdin \
          --authgroup="$group" \
-         --servercert sha256:94e1e00932d8398d5397c600b834f8651c4a32338ed089666d7b2c04d4fe33a5 \
          -s 'split_tunnel_dns_vpnc_script' \
          "$host"
     # -s 'vpn-slice sesac.com harryfox.com themlc-test.com' \
     # -s 'split_tunnel_vpnc_script' \
     # -s 'split_tunnel_dns_vpnc_script' \
     # -s '/usr/local/etc/vpnc-script' \
+    # --servercert sha256:94e1e00932d8398d5397c600b834f8651c4a32338ed089666d7b2c04d4fe33a5 \
 }
 
 siren-calc ()
