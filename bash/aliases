@@ -4,8 +4,8 @@
 # shellcheck disable=SC2139
 alias aliases="less ${BASH_SOURCE[0]}"
 alias l_hist="history | less"
-alias ll="ls -FGalh --color"
-alias ls="ls -FGh --color"
+alias ll="ls -FGalh --color --group-directories-first"
+alias ls="ls -FGh --color --group-directories-first"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
@@ -27,7 +27,6 @@ alias cdl="cd \$(find . -maxdepth 1 -type d | awk 'END{print \$NF}')"
 alias cdf="cd \$(find . -maxdepth 1 -type d | awk 'NR==1{print \$1}')"
 
 # Docker
-
 alias dp='docker ps'
 alias dpa='docker ps -a'
 alias di='docker images'
@@ -54,3 +53,7 @@ alias dcla='docker-compose logs -f --tail="all"'
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# AWS
+alias ave='aws-vault exec'
+alias avl='aws-vault login'

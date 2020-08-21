@@ -26,7 +26,7 @@ hfatunnel ()
 
 hfavpn ()
 {
-    host=${2:-'https://vpn.harryfox.com'}
+    host=${2:-'https://vpn.sesac.com'}
     group=${3:-'HFAVPN'}
     # group=${3:-'EMP-Access'}
     user=${4:-'imacdonald'}

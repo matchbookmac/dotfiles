@@ -1,6 +1,6 @@
 [user]
-	email = imacdonald@rumblefish.com
-	name = Ian MacDonald
+  email = imacdonald@rumblefish.com
+  name = Ian MacDonald
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
@@ -18,7 +18,8 @@
   default = simple
 [credential "https://git-codecommit.us-east-1.amazonaws.com"]
   helper = 
-  helper = !aws2 --profile mlc-proc-ss codecommit credential-helper $@
+  # helper = !aws --profile mlc-proc-ss codecommit credential-helper $@
+  helper = !aws codecommit credential-helper $@
   UseHttpPath = true
 [credential "https://github.com"]
   helper = osxkeychain
@@ -36,4 +37,4 @@
 [remote "origin"]
   prune = true
 [alias]
-	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)%09%(color:red)%(authorname)%09%(color:black)%(color:bold)%(refname:short)\" refs/remotes
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)%09%(color:red)%(authorname)%09%(color:black)%(color:bold)%(refname:short)\" refs/remotes
